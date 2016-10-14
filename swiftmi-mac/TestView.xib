@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="JUq-8Y-BuQ">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="207" width="685" height="639"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="F6x-Ea-SuV">
+                <rect key="frame" x="0.0" y="0.0" width="685" height="639"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="xgE-t7-KaW">
+                        <rect key="frame" x="0.0" y="0.0" width="685" height="639"/>
+                        <subviews>
+                            <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="skf-ta-k9d">
+                                <rect key="frame" x="0.0" y="0.0" width="685" height="639"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" id="jl4-kB-cRi" userLabel="Left">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="639"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </customView>
+                                    <customView fixedFrame="YES" id="YG2-j6-mKx" userLabel="Right">
+                                        <rect key="frame" x="184" y="0.0" width="501" height="639"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </customView>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                            </splitView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="skf-ta-k9d" firstAttribute="top" secondItem="xgE-t7-KaW" secondAttribute="top" id="FKz-Mk-PY4"/>
+                            <constraint firstItem="skf-ta-k9d" firstAttribute="leading" secondItem="xgE-t7-KaW" secondAttribute="leading" id="ZKv-Oc-TaS"/>
+                            <constraint firstAttribute="trailing" secondItem="skf-ta-k9d" secondAttribute="trailing" id="duK-Ms-rmB"/>
+                            <constraint firstAttribute="bottom" secondItem="skf-ta-k9d" secondAttribute="bottom" id="oFM-8n-l6b"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xgE-t7-KaW" firstAttribute="leading" secondItem="F6x-Ea-SuV" secondAttribute="leading" id="LZX-fN-Lml"/>
+                    <constraint firstItem="xgE-t7-KaW" firstAttribute="top" secondItem="F6x-Ea-SuV" secondAttribute="top" id="P4D-DN-N0F"/>
+                    <constraint firstAttribute="bottom" secondItem="xgE-t7-KaW" secondAttribute="bottom" id="dQh-O6-q7s"/>
+                    <constraint firstAttribute="trailing" secondItem="xgE-t7-KaW" secondAttribute="trailing" id="eCa-eJ-gWC"/>
+                </constraints>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="A0960569-59A4-4C30-900B-CC1DBB63909C" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="4Dq-xh-830">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="RpD-F8-LV9"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="dqm-Jk-neu"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="DxW-WD-781"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="MkH-w0-xY7"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="RpD-F8-LV9"/>
+                    <toolbarItem reference="dqm-Jk-neu"/>
+                    <toolbarItem reference="MkH-w0-xY7"/>
+                    <toolbarItem reference="DxW-WD-781"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <point key="canvasLocation" x="185" y="519"/>
+        </window>
+    </objects>
+</document>
