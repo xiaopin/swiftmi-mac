@@ -747,7 +747,7 @@
                                             <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                             <color key="gridColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="TBCell" width="195" minWidth="100" maxWidth="1000" id="d4r-uf-8H7" userLabel="Table Column">
+                                                <tableColumn identifier="" width="195" minWidth="100" maxWidth="1000" id="d4r-uf-8H7" userLabel="Table Column">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -760,7 +760,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="TBCell" id="ZEk-Zu-uRg" userLabel="Table Cell View" customClass="MenuCell" customModule="swiftmi_mac" customModuleProvider="target">
+                                                        <tableCellView identifier="MenuCell" id="ZEk-Zu-uRg" userLabel="Table Cell View" customClass="MenuCell" customModule="swiftmi_mac" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="1" width="195" height="44"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -856,7 +856,7 @@
                                             <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                             <color key="gridColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="TBCell" width="445" minWidth="100" maxWidth="1000" id="pRu-PF-MJS" userLabel="Table Column">
+                                                <tableColumn identifier="" width="445" minWidth="100" maxWidth="1000" id="pRu-PF-MJS" userLabel="Table Column">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -869,7 +869,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView identifier="TBCell" misplaced="YES" id="b9T-W6-2re" userLabel="Table Cell View" customClass="ArticleListCell" customModule="swiftmi_mac" customModuleProvider="target">
+                                                        <tableCellView identifier="ArticleListCell" id="b9T-W6-2re" userLabel="Table Cell View" customClass="ArticleListCell" customModule="swiftmi_mac" customModuleProvider="target">
                                                             <rect key="frame" x="1" y="1" width="445" height="69"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -923,7 +923,7 @@
                                                                 </customView>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="f7h-dW-jzy" firstAttribute="top" secondItem="b9T-W6-2re" secondAttribute="top" id="0us-rN-vrW"/>
+                                                                <constraint firstItem="f7h-dW-jzy" firstAttribute="top" secondItem="b9T-W6-2re" secondAttribute="top" constant="-2" id="0us-rN-vrW"/>
                                                                 <constraint firstAttribute="bottom" secondItem="f7h-dW-jzy" secondAttribute="bottom" id="7K3-e5-j5S"/>
                                                                 <constraint firstItem="f7h-dW-jzy" firstAttribute="leading" secondItem="b9T-W6-2re" secondAttribute="leading" id="Tgv-eI-0Ou"/>
                                                                 <constraint firstAttribute="trailing" secondItem="f7h-dW-jzy" secondAttribute="trailing" id="zGH-5h-pJR"/>

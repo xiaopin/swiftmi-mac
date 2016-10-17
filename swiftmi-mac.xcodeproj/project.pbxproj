@@ -10,7 +10,6 @@
 		12F935741DB0630A002C5F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935731DB0630A002C5F7A /* AppDelegate.swift */; };
 		12F935781DB0630A002C5F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F935771DB0630A002C5F7A /* Assets.xcassets */; };
 		12F9357B1DB0630A002C5F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12F935791DB0630A002C5F7A /* Main.storyboard */; };
-		12F935871DB06862002C5F7A /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12F935861DB06862002C5F7A /* TestView.xib */; };
 		12F935891DB0716A002C5F7A /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935881DB07169002C5F7A /* ArticleListViewController.swift */; };
 		12F9358B1DB074DB002C5F7A /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9358A1DB074DB002C5F7A /* ArticleListCell.swift */; };
 		12F9358D1DB07906002C5F7A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9358C1DB07906002C5F7A /* MenuViewController.swift */; };
@@ -28,7 +27,6 @@
 		12F935771DB0630A002C5F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12F9357A1DB0630A002C5F7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12F9357C1DB0630A002C5F7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		12F935861DB06862002C5F7A /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		12F935881DB07169002C5F7A /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		12F9358A1DB074DB002C5F7A /* ArticleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
 		12F9358C1DB07906002C5F7A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				12F935771DB0630A002C5F7A /* Assets.xcassets */,
 				12F935791DB0630A002C5F7A /* Main.storyboard */,
 				12F9357C1DB0630A002C5F7A /* Info.plist */,
-				12F935861DB06862002C5F7A /* TestView.xib */,
 			);
 			path = "swiftmi-mac";
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12F935871DB06862002C5F7A /* TestView.xib in Resources */,
 				12F935781DB0630A002C5F7A /* Assets.xcassets in Resources */,
 				12F9357B1DB0630A002C5F7A /* Main.storyboard in Resources */,
 			);

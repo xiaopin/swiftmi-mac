@@ -75,7 +75,7 @@ extension ArticleListViewController: NSTableViewDelegate {
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.make(withIdentifier: tableColumn!.identifier, owner: tableView) as! ArticleListCell
+        let cell = tableView.make(withIdentifier: "ArticleListCell", owner: tableView) as! ArticleListCell
         let article = articles[row]
         cell.configureCell(article)
         return cell

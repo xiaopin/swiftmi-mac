@@ -51,7 +51,7 @@ extension MenuViewController: NSTableViewDelegate {
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.make(withIdentifier: tableColumn!.identifier, owner: tableView) as! MenuCell
+        let cell = tableView.make(withIdentifier: "MenuCell", owner: tableView) as! MenuCell
         cell.titleTextField.stringValue = menus[row].title
         return cell
     }
