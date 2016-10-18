@@ -875,13 +875,13 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="71" horizontalPageScroll="10" verticalLineScroll="71" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="PlR-Z2-Ig7">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="92" horizontalPageScroll="10" verticalLineScroll="92" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="PlR-Z2-Ig7">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="280"/>
                                 <clipView key="contentView" id="AFc-qG-8cs">
                                     <rect key="frame" x="1" y="1" width="448" height="278"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="69" rowSizeStyle="automatic" viewBased="YES" id="Md4-ns-s5t">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="90" rowSizeStyle="automatic" viewBased="YES" id="Md4-ns-s5t">
                                             <rect key="frame" x="0.0" y="0.0" width="448" height="278"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -903,42 +903,42 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="ArticleListCell" id="b9T-W6-2re" userLabel="Table Cell View" customClass="ArticleListCell" customModule="swiftmi_mac" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="445" height="69"/>
+                                                            <rect key="frame" x="1" y="1" width="445" height="90"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="f7h-dW-jzy">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="445" height="71"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="445" height="92"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6kS-2r-YbK">
-                                                                            <rect key="frame" x="79" y="42" width="358" height="19"/>
+                                                                            <rect key="frame" x="100" y="60" width="337" height="22"/>
                                                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="mUH-7Y-nVR">
-                                                                                <font key="font" metaFont="system" size="15"/>
-                                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                <font key="font" metaFont="system" size="18"/>
+                                                                                <color key="textColor" red="0.023529411764705882" green="0.21176470588235294" blue="0.25882352941176467" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wy6-hD-mfo">
-                                                                            <rect key="frame" x="79" y="10" width="64" height="17"/>
+                                                                            <rect key="frame" x="100" y="10" width="64" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="17" id="ZlB-if-U9O"/>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="pof-zv-Fqx"/>
                                                                             </constraints>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="source" id="QcH-vk-Cwp">
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pDz-4a-y90">
-                                                                            <rect key="frame" x="159" y="10" width="31" height="17"/>
+                                                                            <rect key="frame" x="180" y="10" width="31" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="date" id="5b8-0U-aHV">
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Yj-jX-hFk">
-                                                                            <rect key="frame" x="10" y="10" width="51" height="51"/>
+                                                                            <rect key="frame" x="10" y="10" width="72" height="72"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="5Yj-jX-hFk" secondAttribute="height" multiplier="1:1" id="Fld-ax-gYf"/>
                                                                             </constraints>

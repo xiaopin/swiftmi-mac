@@ -76,5 +76,15 @@ class Utility: NSObject {
         }
         tabViewController.selectedTabViewItemIndex = toIndex
     }
+    
+    
+    /// 将当前时间转成字符串
+    ///
+    /// - returns: 时间字符串
+    class func nowDateString() -> String {
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return fmt.string(from: Date())
+    }
 
 }

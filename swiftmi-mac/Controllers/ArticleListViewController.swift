@@ -19,7 +19,7 @@ class ArticleListViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 70.0
+        tableView.rowHeight = 90.0
         loadArticles()
     }
     
@@ -42,11 +42,7 @@ class ArticleListViewController: NSViewController {
                 self.articles.append(contentsOf: array)
             }
             self.tableView.reloadData()
-            
-            let date = Date()
-            let fmt = DateFormatter()
-            fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            self.lastUpdateTextField.stringValue = "更新时间 \(fmt.string(from: date))"
+            self.lastUpdateTextField.stringValue = "更新时间 \(Utility.nowDateString())"
         }
     }
 
