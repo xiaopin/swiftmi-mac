@@ -700,16 +700,16 @@
             <objects>
                 <splitViewController storyboardIdentifier="RootSplitViewController" id="vN6-dM-D19" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem id="y1a-lP-FXN"/>
-                        <splitViewItem id="XM8-IH-p1v"/>
+                        <splitViewItem id="Fj8-YX-HXJ"/>
+                        <splitViewItem id="Low-kI-i51"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="Lik-Ll-6oU">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
                     <connections>
-                        <segue destination="bq0-i6-ejJ" kind="relationship" relationship="splitItems" id="eqw-cV-Toh"/>
-                        <segue destination="IDi-Ue-kdP" kind="relationship" relationship="splitItems" id="8X4-XF-HD6"/>
+                        <segue destination="bq0-i6-ejJ" kind="relationship" relationship="splitItems" id="yKt-3S-s4M"/>
+                        <segue destination="IDi-Ue-kdP" kind="relationship" relationship="splitItems" id="1PP-rv-FY5"/>
                     </connections>
                 </splitViewController>
                 <customObject id="F4g-qQ-o58" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1013,10 +1013,10 @@
             </objects>
             <point key="canvasLocation" x="907" y="570"/>
         </scene>
-        <!--View Controller-->
+        <!--Community View Controller-->
         <scene sceneID="CtH-PX-lxM">
             <objects>
-                <viewController id="RvD-1d-LbV" sceneMemberID="viewController">
+                <viewController id="RvD-1d-LbV" customClass="CommunityViewController" customModule="swiftmi_mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="nQB-0P-JJ3">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1026,10 +1026,10 @@
             </objects>
             <point key="canvasLocation" x="907" y="987"/>
         </scene>
-        <!--View Controller-->
+        <!--Books View Controller-->
         <scene sceneID="p7r-Q4-fS4">
             <objects>
-                <viewController id="cpn-cn-hxW" sceneMemberID="viewController">
+                <viewController id="cpn-cn-hxW" customClass="BooksViewController" customModule="swiftmi_mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="1EE-nk-Mql">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1039,10 +1039,10 @@
             </objects>
             <point key="canvasLocation" x="907" y="1366"/>
         </scene>
-        <!--View Controller-->
+        <!--Source Code View Controller-->
         <scene sceneID="DaP-kX-kL1">
             <objects>
-                <viewController id="nbt-fC-65I" sceneMemberID="viewController">
+                <viewController id="nbt-fC-65I" customClass="SourceCodeViewController" customModule="swiftmi_mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="W0f-kd-OMH">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1050,20 +1050,7 @@
                 </viewController>
                 <customObject id="gL2-R9-dPF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="907" y="1725"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="a11-gJ-45P">
-            <objects>
-                <viewController id="THJ-pV-YEZ" sceneMemberID="viewController">
-                    <view key="view" id="yeJ-U5-1b4">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="mew-pP-mI6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="910" y="2093"/>
+            <point key="canvasLocation" x="907" y="1779"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="y4A-zB-vWe">
@@ -1074,7 +1061,6 @@
                         <tabViewItem id="6yG-Sj-XDc"/>
                         <tabViewItem id="fue-xO-iV0"/>
                         <tabViewItem id="beh-dE-JcV"/>
-                        <tabViewItem id="lnx-NM-72x"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="WhW-2g-Xz8">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -1087,7 +1073,6 @@
                         <segue destination="RvD-1d-LbV" kind="relationship" relationship="tabItems" id="v5c-eJ-R3d"/>
                         <segue destination="cpn-cn-hxW" kind="relationship" relationship="tabItems" id="P4e-5d-8WS"/>
                         <segue destination="nbt-fC-65I" kind="relationship" relationship="tabItems" id="4sb-K9-Qoi"/>
-                        <segue destination="THJ-pV-YEZ" kind="relationship" relationship="tabItems" id="mAQ-Zn-jMB"/>
                     </connections>
                 </tabViewController>
                 <customObject id="LJ9-4Z-FJm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

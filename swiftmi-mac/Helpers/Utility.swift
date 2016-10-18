@@ -59,5 +59,22 @@ class Utility: NSObject {
         let vc = storyboard.instantiateController(withIdentifier: identifier) as! T
         return vc
     }
+    
+    
+    /// 切换NSTabViewController的控制器
+    ///
+    /// - parameter toIndex: 目标控制器索引
+    class func switchViewController(_ toIndex: Int) {
+        guard let window = NSApplication.shared().mainWindow else {
+            return
+        }
+        guard let windowController = window.windowController as? WindowController else {
+            return
+        }
+        guard let tabViewController = windowController.tabViewController() else {
+            return
+        }
+        tabViewController.selectedTabViewItemIndex = toIndex
+    }
 
 }

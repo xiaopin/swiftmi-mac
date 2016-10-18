@@ -10,19 +10,34 @@ import Cocoa
 
 class WindowController: NSWindowController {
     
-    lazy var splitViewController: NSSplitViewController = {
-        let vc: NSSplitViewController = Utility.loadViewController("RootSplitViewController")
-        return vc
-    }()
-    
-    lazy var tabViewController: NSTabViewController = {
-        let vc: NSTabViewController = Utility.loadViewController("TabViewController")
-        return vc
-    }()
+    private var _splitViewController: NSSplitViewController?
+    var splitViewController: NSSplitViewController? {
+        get {
+            return _splitViewController
+        }
+    }
 
     override func windowDidLoad() {
         super.windowDidLoad()
         window?.title = "swift迷"
+        _splitViewController = window?.contentViewController as? NSSplitViewController
+    }
+    
+    
+    /// 获取TabViewController
+    ///
+    /// - returns: TabViewController
+    func tabViewController() -> TabViewController? {
+        guard let splitViewController = _splitViewController else {
+            return nil
+        }
+        for vc in splitViewController.childViewControllers {
+            if vc is TabViewController {
+                let tabVc = vc as! TabViewController
+                return tabVc
+            }
+        }
+        return nil
     }
 
 }

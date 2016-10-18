@@ -17,11 +17,10 @@ class MenuViewController: NSViewController {
         super.viewDidLoad()
         tableView.rowHeight = 44.0
         
+        menus.append(MenuModel(title: "文章", identifier: "articles"))
         menus.append(MenuModel(title: "社区", identifier: ""))
-        menus.append(MenuModel(title: "发现", identifier: "articles"))
         menus.append(MenuModel(title: "图书", identifier: "books"))
-        menus.append(MenuModel(title: "Swift源代码", identifier: "code4swift"))
-        menus.append(MenuModel(title: "时间线", identifier: "timeline"))
+        menus.append(MenuModel(title: "源码", identifier: "code4swift"))
         tableView.reloadData()
     }
     
@@ -43,11 +42,12 @@ extension MenuViewController: NSTableViewDelegate {
         if index == -1 {
             return
         }
-        let menu = menus[index]
-        print(menu.title)
-        let alert = NSAlert()
-        alert.messageText = "你点击了\"\(menu.title)\",该功能暂未实现\n敬请期待!"
-        alert.runModal()
+//        let menu = menus[index]
+//        print(menu.title)
+//        let alert = NSAlert()
+//        alert.messageText = "你点击了\"\(menu.title)\",该功能暂未实现\n敬请期待!"
+//        alert.runModal()
+        Utility.switchViewController(index)
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
