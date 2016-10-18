@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
         <plugIn identifier="com.apple.WebKitIBPlugin" version="11201"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -909,10 +910,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="445" height="71"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6kS-2r-YbK">
-                                                                            <rect key="frame" x="8" y="42" width="429" height="19"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="eTS-cW-Bos"/>
-                                                                            </constraints>
+                                                                            <rect key="frame" x="79" y="42" width="358" height="19"/>
                                                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="mUH-7Y-nVR">
                                                                                 <font key="font" metaFont="system" size="15"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -920,9 +918,10 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wy6-hD-mfo">
-                                                                            <rect key="frame" x="8" y="10" width="64" height="17"/>
+                                                                            <rect key="frame" x="79" y="10" width="64" height="17"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="4tG-FM-Uip"/>
+                                                                                <constraint firstAttribute="height" constant="17" id="ZlB-if-U9O"/>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="pof-zv-Fqx"/>
                                                                             </constraints>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="source" id="QcH-vk-Cwp">
                                                                                 <font key="font" metaFont="system"/>
@@ -931,26 +930,34 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pDz-4a-y90">
-                                                                            <rect key="frame" x="76" y="10" width="84" height="17"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="80" id="kTE-7N-JNz"/>
-                                                                            </constraints>
+                                                                            <rect key="frame" x="159" y="10" width="31" height="17"/>
                                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="date" id="5b8-0U-aHV">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
+                                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Yj-jX-hFk">
+                                                                            <rect key="frame" x="10" y="10" width="51" height="51"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="5Yj-jX-hFk" secondAttribute="height" multiplier="1:1" id="Fld-ax-gYf"/>
+                                                                            </constraints>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Qhd-YX-EgU"/>
+                                                                        </imageView>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="6kS-2r-YbK" firstAttribute="leading" secondItem="f7h-dW-jzy" secondAttribute="leading" constant="10" id="ISA-b2-GKq"/>
-                                                                        <constraint firstItem="pDz-4a-y90" firstAttribute="leading" secondItem="wy6-hD-mfo" secondAttribute="trailing" constant="8" id="V5E-IE-il9"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="pDz-4a-y90" secondAttribute="bottom" constant="10" id="VJc-Ly-bep"/>
-                                                                        <constraint firstItem="6kS-2r-YbK" firstAttribute="top" secondItem="f7h-dW-jzy" secondAttribute="top" constant="10" id="bSE-tX-j0q"/>
-                                                                        <constraint firstItem="wy6-hD-mfo" firstAttribute="leading" secondItem="f7h-dW-jzy" secondAttribute="leading" constant="10" id="bjP-ll-BtI"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="6kS-2r-YbK" secondAttribute="trailing" constant="10" id="qwH-3O-2bE"/>
-                                                                        <constraint firstItem="wy6-hD-mfo" firstAttribute="top" secondItem="6kS-2r-YbK" secondAttribute="bottom" constant="15" id="rWx-BH-W0p"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="wy6-hD-mfo" secondAttribute="bottom" constant="10" id="xEO-Yf-Hr9"/>
+                                                                        <constraint firstItem="wy6-hD-mfo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6kS-2r-YbK" secondAttribute="bottom" constant="5" id="75R-vi-zwg"/>
+                                                                        <constraint firstItem="6kS-2r-YbK" firstAttribute="top" secondItem="5Yj-jX-hFk" secondAttribute="top" id="9Ou-pe-gWC"/>
+                                                                        <constraint firstItem="6kS-2r-YbK" firstAttribute="leading" secondItem="5Yj-jX-hFk" secondAttribute="trailing" constant="20" id="AyW-v9-YF7"/>
+                                                                        <constraint firstItem="pDz-4a-y90" firstAttribute="leading" secondItem="wy6-hD-mfo" secondAttribute="trailing" constant="20" id="E7g-JN-Ap1"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="6kS-2r-YbK" secondAttribute="trailing" constant="10" id="MzX-R8-Kcb"/>
+                                                                        <constraint firstItem="wy6-hD-mfo" firstAttribute="bottom" secondItem="5Yj-jX-hFk" secondAttribute="bottom" id="Qz5-wp-Hzi"/>
+                                                                        <constraint firstItem="5Yj-jX-hFk" firstAttribute="leading" secondItem="f7h-dW-jzy" secondAttribute="leading" constant="10" id="Slz-OI-pPe"/>
+                                                                        <constraint firstItem="pDz-4a-y90" firstAttribute="height" secondItem="wy6-hD-mfo" secondAttribute="height" id="dSe-db-2DM"/>
+                                                                        <constraint firstItem="pDz-4a-y90" firstAttribute="bottom" secondItem="wy6-hD-mfo" secondAttribute="bottom" id="eke-J9-yWr"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="5Yj-jX-hFk" secondAttribute="bottom" constant="10" id="sZQ-Tw-9Jj"/>
+                                                                        <constraint firstItem="5Yj-jX-hFk" firstAttribute="top" secondItem="f7h-dW-jzy" secondAttribute="top" constant="10" id="vM3-cI-o06"/>
+                                                                        <constraint firstItem="wy6-hD-mfo" firstAttribute="leading" secondItem="6kS-2r-YbK" secondAttribute="leading" id="xlR-sE-6jP"/>
                                                                     </constraints>
                                                                 </customView>
                                                             </subviews>
@@ -962,6 +969,7 @@
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="dateTextField" destination="pDz-4a-y90" id="ZaN-tN-jc5"/>
+                                                                <outlet property="iconImageView" destination="5Yj-jX-hFk" id="P6T-w8-UhD"/>
                                                                 <outlet property="sourceTextField" destination="wy6-hD-mfo" id="tD2-zL-eMY"/>
                                                                 <outlet property="titleTextField" destination="6kS-2r-YbK" id="xvL-Eb-Vfq"/>
                                                                 <outlet property="wrapView" destination="f7h-dW-jzy" id="RHm-mx-gM8"/>

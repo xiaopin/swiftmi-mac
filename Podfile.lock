@@ -1,14 +1,18 @@
 PODS:
   - Alamofire (4.0.1)
+  - Kingfisher (3.1.3)
   - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
   Alamofire:
     :git: https://github.com/Alamofire/Alamofire.git
+  Kingfisher:
+    :git: https://github.com/onevcat/Kingfisher.git
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
@@ -16,14 +20,18 @@ CHECKOUT OPTIONS:
   Alamofire:
     :commit: b98fe26cb86c1c1227185d30b87bd57cb45fbe3c
     :git: https://github.com/Alamofire/Alamofire.git
+  Kingfisher:
+    :commit: 7d6343613fc86dfc0f17823061cf2566a223c5d1
+    :git: https://github.com/onevcat/Kingfisher.git
   SwiftyJSON:
     :commit: 707516458b618c48ad9365d23a0dad3c3b860fa0
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Kingfisher: 007f5851c18c81e7cc106c9cbac1bafea1cce5dc
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 1beb31022e091ff9e54382e0bb7fdd846ac49f19
+PODFILE CHECKSUM: 48bb4d371b084df705fc2f87d0acb7bc428c797f
 
 COCOAPODS: 1.1.0.beta.2

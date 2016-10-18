@@ -16,7 +16,8 @@ class ArticleModel: NSObject {
     var source: String      = ""
     var createDate: Double  = 0.0
     var viewCount: Int64    = 0
-    var url:String          = ""
+    var url: String         = ""
+    var imageUrl: String    = ""
     
     class func mapping(_ json:JSON) -> ArticleModel{
         let article = ArticleModel()
@@ -27,6 +28,7 @@ class ArticleModel: NSObject {
         article.source = json["sourceName"].stringValue
         article.viewCount = viewCount
         article.createDate = createDate
+        article.imageUrl = json["imageUrl"].stringValue
         article.url = ServiceApi.getArticlShowDetailUrl(article.articleId)
         return article
     }
