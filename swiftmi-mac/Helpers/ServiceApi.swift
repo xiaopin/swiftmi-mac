@@ -30,8 +30,13 @@ class ServiceApi: NSObject {
     /// - parameter articleId: 文章id
     ///
     /// - returns: 查看文章详情的URL
-    class func getArticleShareDetail(_ articleId:Int) -> String {
+    class func getArticlShowDetailUrl(_ articleId:Int) -> String {
         let url="\(host)/articles/\(articleId).html"
+        return url
+    }
+    
+    class func getArticleDetailUrl(_ articleId:Int) -> String {
+        let url="\(host)/api/articles/\(articleId)"
         return url
     }
     

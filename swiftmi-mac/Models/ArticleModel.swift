@@ -27,7 +27,7 @@ class ArticleModel: NSObject {
         article.source = json["sourceName"].stringValue
         article.viewCount = viewCount
         article.createDate = createDate
-        article.url = ServiceApi.getArticleShareDetail(article.articleId)
+        article.url = ServiceApi.getArticlShowDetailUrl(article.articleId)
         return article
     }
     

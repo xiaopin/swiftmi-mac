@@ -71,7 +71,13 @@ extension ArticleListViewController: NSTableViewDelegate {
             return
         }
         let article = articles[index]
-        NSWorkspace.shared().open(URL(string: article.url)!)
+//        NSWorkspace.shared().open(URL(string: article.url)!)
+        Utility.showViewController("ArticleDetailViewController") { (vc) in
+            guard let detailVc = vc as? ArticleDetailViewController else {
+                return
+            }
+            detailVc.article = article
+        }
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
