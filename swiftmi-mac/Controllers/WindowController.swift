@@ -16,11 +16,15 @@ class WindowController: NSWindowController {
         return vc
     }()
     
+    lazy var tabViewController: NSTabViewController = {
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateController(withIdentifier: "TabViewController") as! NSTabViewController
+        return vc
+    }()
 
     override func windowDidLoad() {
         super.windowDidLoad()
         window?.title = "swift迷"
-        window?.contentViewController = splitViewController
     }
 
 }

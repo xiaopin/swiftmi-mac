@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12B336F91DB5BA6E00EFE7AA /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */; };
 		12CC67E11DB4BA9700CD026D /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC67E01DB4BA9700CD026D /* WindowController.swift */; };
 		12CC67E31DB4BF4F00CD026D /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC67E21DB4BF4F00CD026D /* Utility.swift */; };
 		12CC67E51DB4C2DC00CD026D /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC67E41DB4C2DC00CD026D /* ArticleDetailViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		12CC67E01DB4BA9700CD026D /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		12CC67E21DB4BF4F00CD026D /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		12CC67E41DB4C2DC00CD026D /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				12F935881DB07169002C5F7A /* ArticleListViewController.swift */,
 				12F9358C1DB07906002C5F7A /* MenuViewController.swift */,
 				12CC67E01DB4BA9700CD026D /* WindowController.swift */,
+				12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				12CC67E11DB4BA9700CD026D /* WindowController.swift in Sources */,
 				12CC67E51DB4C2DC00CD026D /* ArticleDetailViewController.swift in Sources */,
 				12F9358B1DB074DB002C5F7A /* ArticleListCell.swift in Sources */,
+				12B336F91DB5BA6E00EFE7AA /* TabViewController.swift in Sources */,
 				12F9358D1DB07906002C5F7A /* MenuViewController.swift in Sources */,
 				12F9358F1DB07C50002C5F7A /* MenuCell.swift in Sources */,
 				12F935911DB07CCD002C5F7A /* MenuModel.swift in Sources */,
