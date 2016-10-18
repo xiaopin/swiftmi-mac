@@ -11,14 +11,12 @@ import Cocoa
 class WindowController: NSWindowController {
     
     lazy var splitViewController: NSSplitViewController = {
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateController(withIdentifier: "RootSplitViewController") as! NSSplitViewController
+        let vc: NSSplitViewController = Utility.loadViewController("RootSplitViewController")
         return vc
     }()
     
     lazy var tabViewController: NSTabViewController = {
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateController(withIdentifier: "TabViewController") as! NSTabViewController
+        let vc: NSTabViewController = Utility.loadViewController("TabViewController")
         return vc
     }()
 

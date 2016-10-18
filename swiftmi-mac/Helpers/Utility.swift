@@ -47,5 +47,17 @@ class Utility: NSObject {
         }
         window.title = title
     }
+    
+    
+    /// 中Main.storyboard中加载控制器
+    ///
+    /// - parameter identifier: 唯一标识码
+    ///
+    /// - returns: 对应的控制器实例对象
+    class func loadViewController<T>(_ identifier:String) -> T {
+        let storyboard = NSStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyboard.instantiateController(withIdentifier: identifier) as! T
+        return vc
+    }
 
 }
