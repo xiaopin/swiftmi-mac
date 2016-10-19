@@ -44,7 +44,7 @@ class CommunityViewController: NSViewController, NSTableViewDelegate, NSTableVie
     // MARK: - Private
     
     func loadData(_ maxId: Int) {
-        ApiRequest.getTopicsObject(maxId, count: kPagesize) {
+        ApiRequest.loadTopics(maxId, count: kPagesize) {
             [unowned self] (response) in
             guard let response = response else {
                 return

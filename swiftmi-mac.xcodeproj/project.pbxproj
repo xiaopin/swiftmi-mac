@@ -27,7 +27,6 @@
 		12F9358D1DB07906002C5F7A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9358C1DB07906002C5F7A /* MenuViewController.swift */; };
 		12F9358F1DB07C50002C5F7A /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9358E1DB07C50002C5F7A /* MenuCell.swift */; };
 		12F935911DB07CCD002C5F7A /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935901DB07CCD002C5F7A /* MenuModel.swift */; };
-		12F935931DB085E5002C5F7A /* ArticlesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935921DB085E5002C5F7A /* ArticlesService.swift */; };
 		12F935951DB086E4002C5F7A /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935941DB086E4002C5F7A /* ServiceApi.swift */; };
 		12F935971DB08813002C5F7A /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935961DB08813002C5F7A /* ArticleModel.swift */; };
 		72268D987A056966A9416799 /* Pods_swiftmi_mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79013A84FC41B475856D9C59 /* Pods_swiftmi_mac.framework */; };
@@ -56,7 +55,6 @@
 		12F9358C1DB07906002C5F7A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		12F9358E1DB07C50002C5F7A /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		12F935901DB07CCD002C5F7A /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
-		12F935921DB085E5002C5F7A /* ArticlesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesService.swift; sourceTree = "<group>"; };
 		12F935941DB086E4002C5F7A /* ServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceApi.swift; sourceTree = "<group>"; };
 		12F935961DB08813002C5F7A /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		455DB4996D9C58C5D9B487A7 /* Pods-swiftmi-mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftmi-mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftmi-mac/Pods-swiftmi-mac.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,12 +120,12 @@
 			children = (
 				12CC67E41DB4C2DC00CD026D /* ArticleDetailViewController.swift */,
 				12F935881DB07169002C5F7A /* ArticleListViewController.swift */,
-				12F9358C1DB07906002C5F7A /* MenuViewController.swift */,
-				12CC67E01DB4BA9700CD026D /* WindowController.swift */,
-				12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */,
-				1205A0F01DB5D3BC00AD1BCB /* CommunityViewController.swift */,
-				1205A0F21DB5D3D500AD1BCB /* SourceCodeViewController.swift */,
 				1205A0F41DB5D3F100AD1BCB /* BooksViewController.swift */,
+				1205A0F01DB5D3BC00AD1BCB /* CommunityViewController.swift */,
+				12F9358C1DB07906002C5F7A /* MenuViewController.swift */,
+				1205A0F21DB5D3D500AD1BCB /* SourceCodeViewController.swift */,
+				12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */,
+				12CC67E01DB4BA9700CD026D /* WindowController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,11 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				122E73821DB745AA0032C19A /* Extensions */,
-				12F935921DB085E5002C5F7A /* ArticlesService.swift */,
+				122E737E1DB7231E0032C19A /* ApiRequest.swift */,
+				122E737C1DB721A80032C19A /* Const.swift */,
 				12F935941DB086E4002C5F7A /* ServiceApi.swift */,
 				12CC67E21DB4BF4F00CD026D /* Utility.swift */,
-				122E737C1DB721A80032C19A /* Const.swift */,
-				122E737E1DB7231E0032C19A /* ApiRequest.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -159,8 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				12F9358A1DB074DB002C5F7A /* ArticleListCell.swift */,
-				12F9358E1DB07C50002C5F7A /* MenuCell.swift */,
 				122E73781DB716550032C19A /* CommunityCell.swift */,
+				12F9358E1DB07C50002C5F7A /* MenuCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,7 +302,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				122E737F1DB7231E0032C19A /* ApiRequest.swift in Sources */,
-				12F935931DB085E5002C5F7A /* ArticlesService.swift in Sources */,
 				1205A0F51DB5D3F100AD1BCB /* BooksViewController.swift in Sources */,
 				1205A0F31DB5D3D500AD1BCB /* SourceCodeViewController.swift in Sources */,
 				122E73791DB716550032C19A /* CommunityCell.swift in Sources */,

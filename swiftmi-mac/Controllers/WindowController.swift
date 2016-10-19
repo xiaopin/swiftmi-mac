@@ -19,7 +19,7 @@ class WindowController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        window?.title = "swift迷"
+        window?.title = kMainWindowTitle
         _splitViewController = window?.contentViewController as? NSSplitViewController
     }
     

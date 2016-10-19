@@ -37,7 +37,7 @@ class Utility: NSObject {
             return
         }
         window.contentViewController = windowController.splitViewController
-        window.title = "swift迷"
+        window.title = kMainWindowTitle
     }
     
     

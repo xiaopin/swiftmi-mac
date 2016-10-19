@@ -14,7 +14,6 @@ class ArticleListViewController: NSViewController {
     @IBOutlet weak var lastUpdateTextField: NSTextField!
     
     fileprivate var articles = [ArticleModel]()
-    fileprivate var service = ArticlesService()
 
 
     override func viewDidLoad() {
@@ -24,7 +23,8 @@ class ArticleListViewController: NSViewController {
     }
     
     fileprivate func loadArticles(_ maxId: Int = 0) {
-        service.loadArticles(maxId) { [unowned self](response) in
+        ApiRequest.loadArticles(maxId, count: kPagesize) {
+            [unowned self](response) in
             guard let array = response else {
                 return
             }
