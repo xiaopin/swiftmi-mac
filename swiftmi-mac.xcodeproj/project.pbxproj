@@ -10,6 +10,11 @@
 		1205A0F11DB5D3BC00AD1BCB /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1205A0F01DB5D3BC00AD1BCB /* CommunityViewController.swift */; };
 		1205A0F31DB5D3D500AD1BCB /* SourceCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1205A0F21DB5D3D500AD1BCB /* SourceCodeViewController.swift */; };
 		1205A0F51DB5D3F100AD1BCB /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1205A0F41DB5D3F100AD1BCB /* BooksViewController.swift */; };
+		122E73791DB716550032C19A /* CommunityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E73781DB716550032C19A /* CommunityCell.swift */; };
+		122E737D1DB721A80032C19A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E737C1DB721A80032C19A /* Const.swift */; };
+		122E737F1DB7231E0032C19A /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E737E1DB7231E0032C19A /* ApiRequest.swift */; };
+		122E73811DB725460032C19A /* CommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E73801DB725460032C19A /* CommunityModel.swift */; };
+		122E73841DB745D40032C19A /* NSImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E73831DB745D40032C19A /* NSImageView+Ext.swift */; };
 		12B336F91DB5BA6E00EFE7AA /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */; };
 		12CC67E11DB4BA9700CD026D /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC67E01DB4BA9700CD026D /* WindowController.swift */; };
 		12CC67E31DB4BF4F00CD026D /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC67E21DB4BF4F00CD026D /* Utility.swift */; };
@@ -32,6 +37,11 @@
 		1205A0F01DB5D3BC00AD1BCB /* CommunityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		1205A0F21DB5D3D500AD1BCB /* SourceCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCodeViewController.swift; sourceTree = "<group>"; };
 		1205A0F41DB5D3F100AD1BCB /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		122E73781DB716550032C19A /* CommunityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityCell.swift; sourceTree = "<group>"; };
+		122E737C1DB721A80032C19A /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		122E737E1DB7231E0032C19A /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		122E73801DB725460032C19A /* CommunityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityModel.swift; sourceTree = "<group>"; };
+		122E73831DB745D40032C19A /* NSImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImageView+Ext.swift"; sourceTree = "<group>"; };
 		12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		12CC67E01DB4BA9700CD026D /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		12CC67E21DB4BF4F00CD026D /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -66,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122E73821DB745AA0032C19A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				122E73831DB745D40032C19A /* NSImageView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		12F935671DB0630A002C5F7A = {
 			isa = PBXGroup;
 			children = (
@@ -117,9 +135,12 @@
 		12F935831DB0635D002C5F7A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				122E73821DB745AA0032C19A /* Extensions */,
 				12F935921DB085E5002C5F7A /* ArticlesService.swift */,
 				12F935941DB086E4002C5F7A /* ServiceApi.swift */,
 				12CC67E21DB4BF4F00CD026D /* Utility.swift */,
+				122E737C1DB721A80032C19A /* Const.swift */,
+				122E737E1DB7231E0032C19A /* ApiRequest.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -129,6 +150,7 @@
 			children = (
 				12F935901DB07CCD002C5F7A /* MenuModel.swift */,
 				12F935961DB08813002C5F7A /* ArticleModel.swift */,
+				122E73801DB725460032C19A /* CommunityModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,6 +160,7 @@
 			children = (
 				12F9358A1DB074DB002C5F7A /* ArticleListCell.swift */,
 				12F9358E1DB07C50002C5F7A /* MenuCell.swift */,
+				122E73781DB716550032C19A /* CommunityCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,9 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122E737F1DB7231E0032C19A /* ApiRequest.swift in Sources */,
 				12F935931DB085E5002C5F7A /* ArticlesService.swift in Sources */,
 				1205A0F51DB5D3F100AD1BCB /* BooksViewController.swift in Sources */,
 				1205A0F31DB5D3D500AD1BCB /* SourceCodeViewController.swift in Sources */,
+				122E73791DB716550032C19A /* CommunityCell.swift in Sources */,
 				12CC67E11DB4BA9700CD026D /* WindowController.swift in Sources */,
 				12CC67E51DB4C2DC00CD026D /* ArticleDetailViewController.swift in Sources */,
 				12F9358B1DB074DB002C5F7A /* ArticleListCell.swift in Sources */,
@@ -295,8 +320,11 @@
 				12F935891DB0716A002C5F7A /* ArticleListViewController.swift in Sources */,
 				12CC67E31DB4BF4F00CD026D /* Utility.swift in Sources */,
 				12F935971DB08813002C5F7A /* ArticleModel.swift in Sources */,
+				122E73841DB745D40032C19A /* NSImageView+Ext.swift in Sources */,
 				12F935741DB0630A002C5F7A /* AppDelegate.swift in Sources */,
+				122E73811DB725460032C19A /* CommunityModel.swift in Sources */,
 				12F935951DB086E4002C5F7A /* ServiceApi.swift in Sources */,
+				122E737D1DB721A80032C19A /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

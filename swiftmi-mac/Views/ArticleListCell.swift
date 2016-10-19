@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Kingfisher
 
 class ArticleListCell: NSTableCellView {
     
@@ -37,7 +36,7 @@ class ArticleListCell: NSTableCellView {
         let fmt = DateFormatter()
         fmt.dateFormat = "yyyy-MM-dd"
         dateTextField.stringValue = fmt.string(from: date)
-        iconImageView.kf.setImage(with: URL(string: article.imageUrl), placeholder: Image(named: "placeholder-image"), options: nil, progressBlock: nil, completionHandler: nil)
+        iconImageView.setImage(article.imageUrl, placeholder: NSImage(named: "placeholder-image"))
     }
     
 }

@@ -86,5 +86,18 @@ class Utility: NSObject {
         fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return fmt.string(from: Date())
     }
+    
+    /// 将时间戳格式化成字符串
+    ///
+    /// - parameter time:   时间戳
+    /// - parameter format: 时间格式,默认"yyyy-MM-dd"
+    ///
+    /// - returns: 时间字符串
+    class func formatDate(_ time: TimeInterval, format: String = "yyyy-MM-dd") -> String {
+        let date = Date(timeIntervalSince1970: time)
+        let fmt = DateFormatter()
+        fmt.dateFormat = format
+        return fmt.string(from: date)
+    }
 
 }

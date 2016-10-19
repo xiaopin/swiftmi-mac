@@ -20,8 +20,7 @@ class ServiceApi: NSObject {
     ///
     /// - returns: API请求地址
     class func getArticlesUrl(_ maxId:Int, count:Int) -> String {
-        let url="\(host)/api/articles?maxId=\(maxId)&count=\(count)&withContent=0"
-        return url
+        return "\(host)/api/articles?maxId=\(maxId)&count=\(count)&withContent=0"
     }
     
     
@@ -31,13 +30,17 @@ class ServiceApi: NSObject {
     ///
     /// - returns: 查看文章详情的URL
     class func getArticlShowDetailUrl(_ articleId:Int) -> String {
-        let url="\(host)/articles/\(articleId).html"
-        return url
+        return "\(host)/articles/\(articleId).html"
     }
     
+    /// 获取文章详情JSON数组
     class func getArticleDetailUrl(_ articleId:Int) -> String {
-        let url="\(host)/api/articles/\(articleId)"
-        return url
+        return "\(host)/api/articles/\(articleId)"
+    }
+    
+    /// 获取社区列表数据
+    class func getTopicUrl(_ maxId: Int, count: Int) -> String {
+        return "\(host)/api/topic/list2/\(maxId)/\(count)"
     }
     
 }

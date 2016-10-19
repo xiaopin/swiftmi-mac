@@ -7,12 +7,51 @@
 //  社区
 
 import Cocoa
+import Alamofire
+import SwiftyJSON
 
-class CommunityViewController: NSViewController {
+class CommunityViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+    
+    @IBOutlet weak var tableView: NSTableView!
+    var messages = [CommunityModel]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        tableView.rowHeight = 118.0
+        loadData(0)
+    }
+    
+    // MARK: - NSTableViewDataSource
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return messages.count
+    }
+    
+    // MARK: - NSTableViewDelegate
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = tableView.make(withIdentifier: "CommunityCell", owner: tableView) as! CommunityCell
+        let model = messages[row]
+        cell.configureCell(model)
+        return cell
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        
+    }
+    
+    // MARK: - Private
+    
+    func loadData(_ maxId: Int) {
+        ApiRequest.getTopicsObject(maxId, count: kPagesize) {
+            [unowned self] (response) in
+            guard let response = response else {
+                return
+            }
+            self.messages.append(contentsOf: response)
+            self.tableView.reloadData()
+        }
     }
     
 }
