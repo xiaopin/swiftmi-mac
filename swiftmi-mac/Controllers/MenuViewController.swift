@@ -12,15 +12,16 @@ class MenuViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
     fileprivate var menus = [MenuModel]()
+    fileprivate var selectedCell: MenuCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 44.0
+        tableView.rowHeight = 90.0
         
-        menus.append(MenuModel(title: "文章", identifier: "articles"))
-        menus.append(MenuModel(title: "社区", identifier: ""))
-        menus.append(MenuModel(title: "图书", identifier: "books"))
-        menus.append(MenuModel(title: "源码", identifier: "code4swift"))
+        menus.append(MenuModel(title: "文章", imageName: "news"))
+        menus.append(MenuModel(title: "社区", imageName: "List"))
+        menus.append(MenuModel(title: "图书", imageName: "book"))
+        menus.append(MenuModel(title: "源码", imageName: "Code"))
         tableView.reloadData()
     }
     
@@ -42,17 +43,23 @@ extension MenuViewController: NSTableViewDelegate {
         if index == -1 {
             return
         }
-//        let menu = menus[index]
-//        print(menu.title)
-//        let alert = NSAlert()
-//        alert.messageText = "你点击了\"\(menu.title)\",该功能暂未实现\n敬请期待!"
-//        alert.runModal()
+        if let cell = tableView.view(atColumn: 0, row: index, makeIfNecessary: false) as? MenuCell {
+            selectedCell?.setSelectedBackgroundColor(false)
+            cell.setSelectedBackgroundColor(true)
+            selectedCell = cell
+        }
         Utility.switchViewController(index)
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = tableView.make(withIdentifier: "MenuCell", owner: tableView) as! MenuCell
-        cell.titleTextField.stringValue = menus[row].title
+        let menu = menus[row]
+        cell.configureCell(menu)
+        // 默认选中第一个
+        if row == 0 && nil == selectedCell {
+            cell.setSelectedBackgroundColor(true)
+            selectedCell = cell
+        }
         return cell
     }
     

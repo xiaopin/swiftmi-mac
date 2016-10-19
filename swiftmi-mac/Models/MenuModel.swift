@@ -11,12 +11,12 @@ import Cocoa
 class MenuModel: NSObject {
     
     var title = ""
-    var identifier = ""
+    var imageName = ""
 
-    init(title: String , identifier: String) {
+    init(title: String , imageName: String) {
         super.init()
         self.title = title
-        self.identifier = identifier
+        self.imageName = imageName
     }
     
 }
