@@ -19,7 +19,6 @@ class ArticleDetailViewController: NSViewController, WebFrameLoadDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(webView) \(webView.mainFrame)")
         if let url = article?.url {
             let request = URLRequest(url: URL(string: url)!)
             webView.mainFrame.load(request)
@@ -31,6 +30,7 @@ class ArticleDetailViewController: NSViewController, WebFrameLoadDelegate {
     
     deinit {
         webView.frameLoadDelegate = nil
+        webView.mainFrame.stopLoading()
     }
     
     // MARK: - WebFrameLoadDelegate

@@ -33,10 +33,7 @@ class WindowController: NSWindowController {
                 let vc = tabViewController.tabViewItems[tabViewController.selectedTabViewItemIndex].viewController else {
                 return false
             }
-            if tabViewController.selectedTabViewItemIndex == 0 {
-                return (vc.view.subviews.count > 2)
-            }
-            return (vc.view.subviews.count > 1)
+            return (vc.childViewControllers.count > 0)
         }
         return true
     }
