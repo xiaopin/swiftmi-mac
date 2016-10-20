@@ -26,6 +26,21 @@ class WindowController: NSWindowController {
         _splitViewController = window?.contentViewController as? NSSplitViewController
     }
     
+    override func validateToolbarItem(_ item: NSToolbarItem) -> Bool {
+        if item == gobackToolbarItem {
+            // 是否需要隐藏返回按钮
+            guard let tabViewController = tabViewController(),
+                let vc = tabViewController.tabViewItems[tabViewController.selectedTabViewItemIndex].viewController else {
+                return false
+            }
+            if tabViewController.selectedTabViewItemIndex == 0 {
+                return (vc.view.subviews.count > 2)
+            }
+            return (vc.view.subviews.count > 1)
+        }
+        return true
+    }
+    
     // MARK: - Actions
     
     @IBAction func homeToolbarItemAction(_ sender: NSToolbarItem) {
