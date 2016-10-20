@@ -13,31 +13,42 @@ class ArticleDetailViewController: NSViewController, WebFrameLoadDelegate {
     
     var article: ArticleModel?
     @IBOutlet weak var webView: WebView!
+    @IBOutlet weak var progressIndicator: NSProgressIndicator!
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("\(webView) \(webView.mainFrame)")
         if let url = article?.url {
-            webView.mainFrameURL = url
+            let request = URLRequest(url: URL(string: url)!)
+            webView.mainFrame.load(request)
         }
         if let title = article?.title {
             Utility.setWindowTitle(title)
         }
     }
     
+    deinit {
+        webView.frameLoadDelegate = nil
+    }
+    
     // MARK: - WebFrameLoadDelegate
     
     func webView(_ sender: WebView!, didStartProvisionalLoadFor frame: WebFrame!) {
-        print("开始加载")
+        progressIndicator.startAnimation(nil)
     }
     
     func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
-        print("加载完毕")
+        progressIndicator.stopAnimation(nil)
     }
     
     func webView(_ sender: WebView!, didFailLoadWithError error: Error!, for frame: WebFrame!) {
-        print("加载失败")
+        let alert = NSAlert()
+        alert.messageText = "请求失败"
+        alert.informativeText = "\(error)"
+        alert.addButton(withTitle: "OK")
+        alert.runModal()
     }
     
 }

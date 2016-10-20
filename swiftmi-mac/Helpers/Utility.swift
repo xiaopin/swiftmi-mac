@@ -28,13 +28,14 @@ class Utility: NSObject {
             callback(toVc)
         }
         
+        currentVc.addChildViewController(toVc)
         currentVc.view.addSubview(toVc.view)
         toVc.view.frame = currentVc.view.bounds
         if !toVc.view.wantsLayer {
             toVc.view.wantsLayer = true
             toVc.view.layer?.backgroundColor = NSColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0).cgColor
         }
-        toVc.view.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
+//        toVc.view.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
     }
     
     /// 切换到根控制器
@@ -46,8 +47,9 @@ class Utility: NSObject {
             return
         }
         
-        for subview in currentVc.view.subviews {
-            subview.removeFromSuperview()
+        for childVc in currentVc.childViewControllers {
+            childVc.removeFromParentViewController()
+            childVc.view.removeFromSuperview()
         }
         
         window.title = kMainWindowTitle
@@ -62,10 +64,11 @@ class Utility: NSObject {
                 return
         }
         
-        guard let subview = currentVc.view.subviews.last else {
+        guard let lastVc = currentVc.childViewControllers.last else {
             return
         }
-        subview.removeFromSuperview()
+        lastVc.removeFromParentViewController()
+        lastVc.view.removeFromSuperview()
         
         window.title = kMainWindowTitle
     }

@@ -735,16 +735,25 @@
                                 <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
                                     <nil key="identifier"/>
                                 </webPreferences>
+                                <connections>
+                                    <outlet property="frameLoadDelegate" destination="bbO-4s-Ql7" id="csc-n6-bS5"/>
+                                </connections>
                             </webView>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="bop-7e-DK5">
+                                <rect key="frame" x="209" y="134" width="32" height="32"/>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="krE-Hd-nVi" secondAttribute="bottom" id="0ke-l1-cBk"/>
+                            <constraint firstItem="bop-7e-DK5" firstAttribute="centerX" secondItem="NrA-2j-Rto" secondAttribute="centerX" id="FJA-Gh-wT0"/>
+                            <constraint firstItem="bop-7e-DK5" firstAttribute="centerY" secondItem="NrA-2j-Rto" secondAttribute="centerY" id="HgW-hb-Z8B"/>
                             <constraint firstItem="krE-Hd-nVi" firstAttribute="leading" secondItem="NrA-2j-Rto" secondAttribute="leading" id="Y9e-s1-GSL"/>
                             <constraint firstAttribute="trailing" secondItem="krE-Hd-nVi" secondAttribute="trailing" id="fHR-IO-wl1"/>
                             <constraint firstItem="krE-Hd-nVi" firstAttribute="top" secondItem="NrA-2j-Rto" secondAttribute="top" id="nWS-En-9x3"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="progressIndicator" destination="bop-7e-DK5" id="YcX-9v-v3F"/>
                         <outlet property="webView" destination="krE-Hd-nVi" id="Fxt-AQ-kCi"/>
                     </connections>
                 </viewController>

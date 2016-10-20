@@ -49,12 +49,7 @@ class WindowController: NSWindowController {
     }
     
     @IBAction func gobackToolbarItemAction(_ sender: NSToolbarItem) {
-        guard let tabViewController = tabViewController(),
-            let vc = tabViewController.tabViewItems[tabViewController.selectedTabViewItemIndex].viewController else {
-            return
-        }
-        vc.view.subviews.last?.removeFromSuperview()
-        
+        Utility.popViewController()
     }
     
     // MARK: - Public
