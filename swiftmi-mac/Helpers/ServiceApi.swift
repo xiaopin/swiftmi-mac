@@ -13,7 +13,7 @@ class ServiceApi: NSObject {
     static let host:String = "http://www.swiftmi.com"
     
     
-    /// 获取文章列表数据
+    /// 获取文章列表数据URL
     ///
     /// - parameter maxId: 文章最大id
     /// - parameter count: 分页大小
@@ -33,14 +33,19 @@ class ServiceApi: NSObject {
         return "\(host)/articles/\(articleId).html"
     }
     
-    /// 获取文章详情JSON数组
+    /// 获取文章详情JSON数据URL
     class func getArticleDetailUrl(_ articleId:Int) -> String {
         return "\(host)/api/articles/\(articleId)"
     }
     
-    /// 获取社区列表数据
+    /// 获取社区列表数据URL
     class func getTopicUrl(_ maxId: Int, count: Int) -> String {
         return "\(host)/api/topic/list2/\(maxId)/\(count)"
+    }
+    
+    /// 获取源码列表数据URL
+    class func getSourceCodeUrl(_ maxId:Int,count:Int) -> String {
+        return "\(host)/api/sharecode/list/\(maxId)/\(count)"
     }
     
 }

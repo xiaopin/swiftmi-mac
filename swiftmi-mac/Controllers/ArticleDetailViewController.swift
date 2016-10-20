@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 
-class ArticleDetailViewController: NSViewController {
+class ArticleDetailViewController: NSViewController, WebFrameLoadDelegate {
     
     var article: ArticleModel?
     @IBOutlet weak var webView: WebView!
@@ -26,10 +26,18 @@ class ArticleDetailViewController: NSViewController {
         }
     }
     
-    // MARK: - Action
+    // MARK: - WebFrameLoadDelegate
     
-    @IBAction func back(_ sender: NSButton) {
-        Utility.popToRootViewController()
+    func webView(_ sender: WebView!, didStartProvisionalLoadFor frame: WebFrame!) {
+        print("开始加载")
+    }
+    
+    func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
+        print("加载完毕")
+    }
+    
+    func webView(_ sender: WebView!, didFailLoadWithError error: Error!, for frame: WebFrame!) {
+        print("加载失败")
     }
     
 }

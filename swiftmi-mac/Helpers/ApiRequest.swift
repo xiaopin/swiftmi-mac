@@ -13,7 +13,7 @@ import SwiftyJSON
 
 class ApiRequest: NSObject {
     
-    /// 获取文章列表数组
+    /// 获取文章列表数据
     ///
     /// - parameter maxId:    最大id
     /// - parameter count:    分页大小
@@ -63,6 +63,32 @@ class ApiRequest: NSObject {
                 topics.append(topic)
             }
             callback(topics)
+        }
+    }
+    
+    /// 获取源码列表数据
+    ///
+    /// - parameter maxId:    最大id
+    /// - parameter count:    分页大小
+    /// - parameter callback: 回调
+    class func loadSourceCodes(_ maxId: Int, count: Int, callback: @escaping ((_ response: [SourceCodeModel]?) -> Void)) {
+        Alamofire.request(ServiceApi.getSourceCodeUrl(maxId, count: count)).responseJSON { response in
+            guard let json = response.result.value else {
+                return callback(nil)
+            }
+            let result = JSON(json)
+            
+            guard let _ = result["isSuc"].bool else {
+                return callback(nil)
+            }
+            
+            var codes:[SourceCodeModel] = [SourceCodeModel]()
+            let items = result["result"].arrayValue
+            for item in items {
+                let code = SourceCodeModel.mapping(item)
+                codes.append(code)
+            }
+            callback(codes)
         }
     }
     
