@@ -10,12 +10,15 @@ import Cocoa
 
 class WindowController: NSWindowController {
     
+    @IBOutlet weak var gobackToolbarItem: NSToolbarItem!
     private var _splitViewController: NSSplitViewController?
     var splitViewController: NSSplitViewController? {
         get {
             return _splitViewController
         }
     }
+    
+    // MARK: - Lifecycle
 
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -23,6 +26,23 @@ class WindowController: NSWindowController {
         _splitViewController = window?.contentViewController as? NSSplitViewController
     }
     
+    // MARK: - Actions
+    
+    @IBAction func homeToolbarItemAction(_ sender: NSToolbarItem) {
+        let url = URL(string: kHomeUrl)
+        NSWorkspace.shared().open(url!)
+    }
+    
+    @IBAction func gobackToolbarItemAction(_ sender: NSToolbarItem) {
+        guard let tabViewController = tabViewController(),
+            let vc = tabViewController.tabViewItems[tabViewController.selectedTabViewItemIndex].viewController else {
+            return
+        }
+        vc.view.subviews.last?.removeFromSuperview()
+        
+    }
+    
+    // MARK: - Public
     
     /// 获取TabViewController
     ///

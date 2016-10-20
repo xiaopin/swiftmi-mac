@@ -670,24 +670,30 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="294" y="313" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
-                        <toolbar key="toolbar" implicitIdentifier="8F1DAB72-0726-4A58-AEB2-FA599379A26F" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="SvD-oI-9gD">
+                        <toolbar key="toolbar" implicitIdentifier="8F1DAB72-0726-4A58-AEB2-FA599379A26F" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="small" id="SvD-oI-9gD">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="TaD-Vv-Psu"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="BZt-3E-rj3"/>
-                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="aL6-vP-8fD"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="0A5-pY-16w"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="K5g-90-3ez"/>
+                                <toolbarItem implicitItemIdentifier="C88AC284-5530-4367-A987-C752CC9CCFB0" label="上一页" paletteLabel="上一页" tag="-1" image="NSLeftFacingTriangleTemplate" id="ZLs-YQ-Whp">
+                                    <connections>
+                                        <action selector="gobackToolbarItemAction:" target="QD5-gp-o2P" id="UdU-Ds-uzE"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="20D70496-FEB7-4408-BC98-DA1CD9A597CB" label="官网" paletteLabel="官网" tag="-1" image="NSNetwork" id="aNd-6W-63z">
+                                    <connections>
+                                        <action selector="homeToolbarItemAction:" target="QD5-gp-o2P" id="y72-Zw-NKf"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="TaD-Vv-Psu"/>
-                                <toolbarItem reference="BZt-3E-rj3"/>
-                                <toolbarItem reference="BZt-3E-rj3"/>
+                                <toolbarItem reference="ZLs-YQ-Whp"/>
                                 <toolbarItem reference="K5g-90-3ez"/>
-                                <toolbarItem reference="aL6-vP-8fD"/>
+                                <toolbarItem reference="aNd-6W-63z"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
                     <connections>
+                        <outlet property="gobackToolbarItem" destination="ZLs-YQ-Whp" id="OtD-iF-ffr"/>
                         <segue destination="vN6-dM-D19" kind="relationship" relationship="window.shadowedContentViewController" id="7jv-5y-voM"/>
                     </connections>
                 </windowController>
@@ -1259,6 +1265,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSLeftFacingTriangleTemplate" width="9" height="12"/>
+        <image name="NSNetwork" width="32" height="32"/>
         <image name="comment" width="20" height="20"/>
         <image name="placeholder-image" width="60" height="60"/>
     </resources>

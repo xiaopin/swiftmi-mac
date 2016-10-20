@@ -10,3 +10,4 @@ import Foundation
 
 let kMainWindowTitle    = "Swift迷"
 let kPagesize: Int      = 20
+let kHomeUrl            = "http://www.swiftmi.com"
