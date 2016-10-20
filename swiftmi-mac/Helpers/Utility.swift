@@ -10,37 +10,67 @@ import Cocoa
 
 class Utility: NSObject {
     
-    /// 显示下一个控制器
+    /// 在NSTabViewController当前选中的控制器中显示下一个控制器
     ///
     /// - parameter identifier: Storyboard中控制器的标识
     /// - parameter callback:   回调,可以进行数据绑定
     class func showViewController(_ identifier: String, callback:((_ vc: NSViewController) -> Void)?) {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        guard let toVc = storyboard.instantiateController(withIdentifier: identifier) as? NSViewController else {
+        guard let toVc = storyboard.instantiateController(withIdentifier: identifier) as? NSViewController,
+            let window = NSApplication.shared().mainWindow,
+            let windowController = window.windowController as? WindowController,
+            let tabViewController = windowController.tabViewController(),
+            let currentVc = tabViewController.tabViewItems[tabViewController.selectedTabViewItemIndex].viewController else {
             return
         }
-        guard let window = NSApplication.shared().mainWindow else {
-            return
-        }
+        
         if let callback = callback {
             callback(toVc)
         }
-        window.contentViewController = toVc
+        
+        currentVc.view.addSubview(toVc.view)
+        toVc.view.frame = currentVc.view.bounds
+        if !toVc.view.wantsLayer {
+            toVc.view.wantsLayer = true
+            toVc.view.layer?.backgroundColor = NSColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0).cgColor
+        }
+        toVc.view.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
     }
     
     /// 切换到根控制器
     class func popToRootViewController() {
-        guard let window = NSApplication.shared().mainWindow else {
+        guard let window = NSApplication.shared().mainWindow,
+            let windowController = window.windowController as? WindowController,
+            let tabViewController = windowController.tabViewController(),
+            let currentVc = tabViewController.tabViewItems[tabViewController.selectedTabViewItemIndex].viewController else {
             return
         }
-        guard let windowController = window.windowController as? WindowController else {
-            return
+        
+        for subview in currentVc.view.subviews {
+            subview.removeFromSuperview()
         }
-        window.contentViewController = windowController.splitViewController
+        
         window.title = kMainWindowTitle
     }
     
+    /// 返回上级控制器
+    class func popViewController() {
+        guard let window = NSApplication.shared().mainWindow,
+            let windowController = window.windowController as? WindowController,
+            let tabViewController = windowController.tabViewController(),
+            let currentVc = tabViewController.tabViewItems[tabViewController.selectedTabViewItemIndex].viewController else {
+                return
+        }
+        
+        guard let subview = currentVc.view.subviews.last else {
+            return
+        }
+        subview.removeFromSuperview()
+        
+        window.title = kMainWindowTitle
+    }
     
+    /// 设置主窗口标题
     class func setWindowTitle(_ title: String) {
         guard let window = NSApplication.shared().mainWindow else {
             return
@@ -65,13 +95,9 @@ class Utility: NSObject {
     ///
     /// - parameter toIndex: 目标控制器索引
     class func switchViewController(_ toIndex: Int) {
-        guard let window = NSApplication.shared().mainWindow else {
-            return
-        }
-        guard let windowController = window.windowController as? WindowController else {
-            return
-        }
-        guard let tabViewController = windowController.tabViewController() else {
+        guard let window = NSApplication.shared().mainWindow,
+            let windowController = window.windowController as? WindowController,
+            let tabViewController = windowController.tabViewController() else {
             return
         }
         tabViewController.selectedTabViewItemIndex = toIndex
