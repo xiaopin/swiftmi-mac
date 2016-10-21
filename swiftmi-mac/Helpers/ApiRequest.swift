@@ -92,4 +92,31 @@ class ApiRequest: NSObject {
         }
     }
     
+    /// 获取图书列表数据
+    ///
+    /// - parameter language: 语言(1:中文 2:英文)
+    /// - parameter maxId:    最大id
+    /// - parameter count:    分页大小
+    /// - parameter callback: 回调
+    class func loadBooksWithLanguage(_ language: BookLanguage, maxId: Int, count: Int, callback:@escaping ((_ language:BookLanguage, _ response: [BookModel]?) -> Void)) {
+        Alamofire.request(ServiceApi.getBooksUrl(language, maxId: maxId, count: count)).responseJSON { (response) in
+            guard let json = response.result.value else {
+                return callback(language, nil)
+            }
+            let result = JSON(json)
+            
+            guard let _ = result["isSuc"].bool else {
+                return callback(language, nil)
+            }
+            
+            var books:[BookModel] = [BookModel]()
+            let items = result["result"].arrayValue
+            for item in items {
+                let book = BookModel.mapping(item)
+                books.append(book)
+            }
+            callback(language, books)
+        }
+    }
+    
 }

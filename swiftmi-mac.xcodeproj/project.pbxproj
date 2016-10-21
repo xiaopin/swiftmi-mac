@@ -34,6 +34,8 @@
 		12F935951DB086E4002C5F7A /* ServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935941DB086E4002C5F7A /* ServiceApi.swift */; };
 		12F935971DB08813002C5F7A /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935961DB08813002C5F7A /* ArticleModel.swift */; };
 		72268D987A056966A9416799 /* Pods_swiftmi_mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79013A84FC41B475856D9C59 /* Pods_swiftmi_mac.framework */; };
+		B2954ADB1DBA22FE00DD45F8 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2954ADA1DBA22FE00DD45F8 /* BookCell.swift */; };
+		B2954ADD1DBA23EF00DD45F8 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2954ADC1DBA23EF00DD45F8 /* BookModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		12F935961DB08813002C5F7A /* ArticleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		455DB4996D9C58C5D9B487A7 /* Pods-swiftmi-mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftmi-mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftmi-mac/Pods-swiftmi-mac.debug.xcconfig"; sourceTree = "<group>"; };
 		79013A84FC41B475856D9C59 /* Pods_swiftmi_mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftmi_mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2954ADA1DBA22FE00DD45F8 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		B2954ADC1DBA23EF00DD45F8 /* BookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		F45E49220B6085B868F5FFA2 /* Pods-swiftmi-mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftmi-mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftmi-mac/Pods-swiftmi-mac.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,12 +135,12 @@
 				1205A0F41DB5D3F100AD1BCB /* BooksViewController.swift */,
 				1205A0F01DB5D3BC00AD1BCB /* CommunityViewController.swift */,
 				12F9358C1DB07906002C5F7A /* MenuViewController.swift */,
-				1205A0F21DB5D3D500AD1BCB /* SourceCodeViewController.swift */,
-				12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */,
-				12CC67E01DB4BA9700CD026D /* WindowController.swift */,
 				122131271DB8A90800454C86 /* SourceCodeCollectionViewItem.swift */,
 				122131281DB8A90800454C86 /* SourceCodeCollectionViewItem.xib */,
+				1205A0F21DB5D3D500AD1BCB /* SourceCodeViewController.swift */,
+				12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */,
 				1250D6311DB99E7F005636EE /* WebViewController.swift */,
+				12CC67E01DB4BA9700CD026D /* WindowController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,9 +161,10 @@
 		12F935841DB0635D002C5F7A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				12F935901DB07CCD002C5F7A /* MenuModel.swift */,
 				12F935961DB08813002C5F7A /* ArticleModel.swift */,
+				B2954ADC1DBA23EF00DD45F8 /* BookModel.swift */,
 				122E73801DB725460032C19A /* CommunityModel.swift */,
+				12F935901DB07CCD002C5F7A /* MenuModel.swift */,
 				1221312D1DB8B47300454C86 /* SourceCodeModel.swift */,
 			);
 			path = Models;
@@ -169,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				12F9358A1DB074DB002C5F7A /* ArticleListCell.swift */,
+				B2954ADA1DBA22FE00DD45F8 /* BookCell.swift */,
 				122E73781DB716550032C19A /* CommunityCell.swift */,
 				12F9358E1DB07C50002C5F7A /* MenuCell.swift */,
 			);
@@ -323,6 +329,7 @@
 				1205A0F31DB5D3D500AD1BCB /* SourceCodeViewController.swift in Sources */,
 				122E73791DB716550032C19A /* CommunityCell.swift in Sources */,
 				12CC67E11DB4BA9700CD026D /* WindowController.swift in Sources */,
+				B2954ADD1DBA23EF00DD45F8 /* BookModel.swift in Sources */,
 				12F9358B1DB074DB002C5F7A /* ArticleListCell.swift in Sources */,
 				12B336F91DB5BA6E00EFE7AA /* TabViewController.swift in Sources */,
 				12F9358D1DB07906002C5F7A /* MenuViewController.swift in Sources */,
@@ -331,6 +338,7 @@
 				12F9358F1DB07C50002C5F7A /* MenuCell.swift in Sources */,
 				12F935911DB07CCD002C5F7A /* MenuModel.swift in Sources */,
 				1250D6321DB99E7F005636EE /* WebViewController.swift in Sources */,
+				B2954ADB1DBA22FE00DD45F8 /* BookCell.swift in Sources */,
 				12F935891DB0716A002C5F7A /* ArticleListViewController.swift in Sources */,
 				12CC67E31DB4BF4F00CD026D /* Utility.swift in Sources */,
 				12F935971DB08813002C5F7A /* ArticleModel.swift in Sources */,

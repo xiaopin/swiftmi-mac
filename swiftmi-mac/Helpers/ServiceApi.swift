@@ -58,4 +58,20 @@ class ServiceApi: NSObject {
         return "\(host)/code4swift/\(codeId).html"
     }
     
+    /// 获取图书列表数据URL
+    ///
+    /// - parameter type:  图书类型(1:中文 2:英文)
+    /// - parameter maxId: 最大id
+    /// - parameter count: 分页大小
+    ///
+    /// - returns: 接口地址
+    class func getBooksUrl(_ type:BookLanguage, maxId:Int,count:Int) -> String{
+        return "\(host)/api/books/\(type.rawValue)/\(maxId)/\(count)"
+    }
+    
+    /// 获取图书详情URL
+    class func getBookDetailUrl(_ bookId: Int) -> String {
+        return "\(host)/book/\(bookId).html"
+    }
+    
 }
