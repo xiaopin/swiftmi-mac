@@ -67,12 +67,11 @@ extension ArticleListViewController: NSTableViewDelegate {
             return
         }
         let article = articles[index]
-//        NSWorkspace.shared().open(URL(string: article.url)!)
-        Utility.showViewController("ArticleDetailViewController") { (vc) in
-            guard let detailVc = vc as? ArticleDetailViewController else {
+        Utility.showViewController("WebViewController") { (vc) in
+            guard let webVc = vc as? WebViewController else {
                 return
             }
-            detailVc.article = article
+            webVc.url = article.url
         }
     }
     

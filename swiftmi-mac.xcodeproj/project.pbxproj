@@ -18,10 +18,11 @@
 		122E737F1DB7231E0032C19A /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E737E1DB7231E0032C19A /* ApiRequest.swift */; };
 		122E73811DB725460032C19A /* CommunityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E73801DB725460032C19A /* CommunityModel.swift */; };
 		122E73841DB745D40032C19A /* NSImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122E73831DB745D40032C19A /* NSImageView+Ext.swift */; };
+		1250D6321DB99E7F005636EE /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250D6311DB99E7F005636EE /* WebViewController.swift */; };
+		1250D6351DB9A52C005636EE /* global.js in Resources */ = {isa = PBXBuildFile; fileRef = 1250D6341DB9A52C005636EE /* global.js */; };
 		12B336F91DB5BA6E00EFE7AA /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */; };
 		12CC67E11DB4BA9700CD026D /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC67E01DB4BA9700CD026D /* WindowController.swift */; };
 		12CC67E31DB4BF4F00CD026D /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC67E21DB4BF4F00CD026D /* Utility.swift */; };
-		12CC67E51DB4C2DC00CD026D /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC67E41DB4C2DC00CD026D /* ArticleDetailViewController.swift */; };
 		12F935741DB0630A002C5F7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F935731DB0630A002C5F7A /* AppDelegate.swift */; };
 		12F935781DB0630A002C5F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12F935771DB0630A002C5F7A /* Assets.xcassets */; };
 		12F9357B1DB0630A002C5F7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12F935791DB0630A002C5F7A /* Main.storyboard */; };
@@ -48,10 +49,11 @@
 		122E737E1DB7231E0032C19A /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		122E73801DB725460032C19A /* CommunityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityModel.swift; sourceTree = "<group>"; };
 		122E73831DB745D40032C19A /* NSImageView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImageView+Ext.swift"; sourceTree = "<group>"; };
+		1250D6311DB99E7F005636EE /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		1250D6341DB9A52C005636EE /* global.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = global.js; sourceTree = "<group>"; };
 		12B336F81DB5BA6E00EFE7AA /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		12CC67E01DB4BA9700CD026D /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		12CC67E21DB4BF4F00CD026D /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		12CC67E41DB4C2DC00CD026D /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		12F935701DB0630A002C5F7A /* swiftmi-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftmi-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F935731DB0630A002C5F7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12F935771DB0630A002C5F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +127,6 @@
 		12F935821DB0635D002C5F7A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				12CC67E41DB4C2DC00CD026D /* ArticleDetailViewController.swift */,
 				12F935881DB07169002C5F7A /* ArticleListViewController.swift */,
 				1205A0F41DB5D3F100AD1BCB /* BooksViewController.swift */,
 				1205A0F01DB5D3BC00AD1BCB /* CommunityViewController.swift */,
@@ -135,6 +136,7 @@
 				12CC67E01DB4BA9700CD026D /* WindowController.swift */,
 				122131271DB8A90800454C86 /* SourceCodeCollectionViewItem.swift */,
 				122131281DB8A90800454C86 /* SourceCodeCollectionViewItem.xib */,
+				1250D6311DB99E7F005636EE /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +149,7 @@
 				122E737C1DB721A80032C19A /* Const.swift */,
 				12F935941DB086E4002C5F7A /* ServiceApi.swift */,
 				12CC67E21DB4BF4F00CD026D /* Utility.swift */,
+				1250D6341DB9A52C005636EE /* global.js */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1221312A1DB8A90800454C86 /* SourceCodeCollectionViewItem.xib in Resources */,
+				1250D6351DB9A52C005636EE /* global.js in Resources */,
 				12F935781DB0630A002C5F7A /* Assets.xcassets in Resources */,
 				12F9357B1DB0630A002C5F7A /* Main.storyboard in Resources */,
 			);
@@ -319,7 +323,6 @@
 				1205A0F31DB5D3D500AD1BCB /* SourceCodeViewController.swift in Sources */,
 				122E73791DB716550032C19A /* CommunityCell.swift in Sources */,
 				12CC67E11DB4BA9700CD026D /* WindowController.swift in Sources */,
-				12CC67E51DB4C2DC00CD026D /* ArticleDetailViewController.swift in Sources */,
 				12F9358B1DB074DB002C5F7A /* ArticleListCell.swift in Sources */,
 				12B336F91DB5BA6E00EFE7AA /* TabViewController.swift in Sources */,
 				12F9358D1DB07906002C5F7A /* MenuViewController.swift in Sources */,
@@ -327,6 +330,7 @@
 				1221312E1DB8B47300454C86 /* SourceCodeModel.swift in Sources */,
 				12F9358F1DB07C50002C5F7A /* MenuCell.swift in Sources */,
 				12F935911DB07CCD002C5F7A /* MenuModel.swift in Sources */,
+				1250D6321DB99E7F005636EE /* WebViewController.swift in Sources */,
 				12F935891DB0716A002C5F7A /* ArticleListViewController.swift in Sources */,
 				12CC67E31DB4BF4F00CD026D /* Utility.swift in Sources */,
 				12F935971DB08813002C5F7A /* ArticleModel.swift in Sources */,

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="11201"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -722,44 +721,30 @@
             </objects>
             <point key="canvasLocation" x="-334" y="875"/>
         </scene>
-        <!--Article Detail View Controller-->
-        <scene sceneID="crc-EK-OuC">
+        <!--Web View Controller-->
+        <scene sceneID="dXm-HP-Bya">
             <objects>
-                <viewController storyboardIdentifier="ArticleDetailViewController" id="bbO-4s-Ql7" customClass="ArticleDetailViewController" customModule="swiftmi_mac" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="NrA-2j-Rto">
+                <viewController storyboardIdentifier="WebViewController" id="gy5-8m-juT" customClass="WebViewController" customModule="swiftmi_mac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="pTi-LW-603">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="krE-Hd-nVi">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                                <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
-                                    <nil key="identifier"/>
-                                </webPreferences>
-                                <connections>
-                                    <outlet property="frameLoadDelegate" destination="bbO-4s-Ql7" id="csc-n6-bS5"/>
-                                </connections>
-                            </webView>
-                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="bop-7e-DK5">
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="x5g-hF-cqK">
                                 <rect key="frame" x="209" y="134" width="32" height="32"/>
                             </progressIndicator>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="krE-Hd-nVi" secondAttribute="bottom" id="0ke-l1-cBk"/>
-                            <constraint firstItem="bop-7e-DK5" firstAttribute="centerX" secondItem="NrA-2j-Rto" secondAttribute="centerX" id="FJA-Gh-wT0"/>
-                            <constraint firstItem="bop-7e-DK5" firstAttribute="centerY" secondItem="NrA-2j-Rto" secondAttribute="centerY" id="HgW-hb-Z8B"/>
-                            <constraint firstItem="krE-Hd-nVi" firstAttribute="leading" secondItem="NrA-2j-Rto" secondAttribute="leading" id="Y9e-s1-GSL"/>
-                            <constraint firstAttribute="trailing" secondItem="krE-Hd-nVi" secondAttribute="trailing" id="fHR-IO-wl1"/>
-                            <constraint firstItem="krE-Hd-nVi" firstAttribute="top" secondItem="NrA-2j-Rto" secondAttribute="top" id="nWS-En-9x3"/>
+                            <constraint firstItem="x5g-hF-cqK" firstAttribute="centerX" secondItem="pTi-LW-603" secondAttribute="centerX" id="Aop-9P-XWf"/>
+                            <constraint firstItem="x5g-hF-cqK" firstAttribute="centerY" secondItem="pTi-LW-603" secondAttribute="centerY" id="L3w-o9-K6I"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="progressIndicator" destination="bop-7e-DK5" id="YcX-9v-v3F"/>
-                        <outlet property="webView" destination="krE-Hd-nVi" id="Fxt-AQ-kCi"/>
+                        <outlet property="progressIndicator" destination="x5g-hF-cqK" id="bt7-qt-Zr6"/>
                     </connections>
                 </viewController>
-                <customObject id="dRs-BK-UPP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="hTb-Lx-Z4e" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334" y="1439"/>
+            <point key="canvasLocation" x="-388" y="1384"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="TBa-LF-4vT">
