@@ -43,9 +43,19 @@ class ServiceApi: NSObject {
         return "\(host)/api/topic/list2/\(maxId)/\(count)"
     }
     
+    /// 获取社区文章详情URL
+    class func getTopicDetailUrl(_ topicId:Int) -> String {
+        return "\(host)/topic/\(topicId).html"
+    }
+    
     /// 获取源码列表数据URL
     class func getSourceCodeUrl(_ maxId:Int,count:Int) -> String {
         return "\(host)/api/sharecode/list/\(maxId)/\(count)"
+    }
+    
+    /// 获取源码文章详情URL
+    class func getSourceCodeDetailUrl(_ codeId:Int) -> String {
+        return "\(host)/code4swift/\(codeId).html"
     }
     
 }

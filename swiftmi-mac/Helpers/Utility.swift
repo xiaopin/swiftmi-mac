@@ -38,6 +38,18 @@ class Utility: NSObject {
         toVc.view.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
     }
     
+    /// 显示一个网页
+    ///
+    /// - parameter url: 网页URL
+    class func showWebViewController(_ url: String, title: String?) {
+        self.showViewController("WebViewController") { (vc) in
+            guard let webVc = vc as? WebViewController else {
+                return
+            }
+            webVc.url = url
+        }
+    }
+    
     /// 切换到根控制器
     class func popToRootViewController() {
         guard let window = NSApplication.shared().mainWindow,

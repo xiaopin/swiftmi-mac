@@ -67,12 +67,13 @@ extension ArticleListViewController: NSTableViewDelegate {
             return
         }
         let article = articles[index]
-        Utility.showViewController("WebViewController") { (vc) in
-            guard let webVc = vc as? WebViewController else {
-                return
-            }
-            webVc.url = article.url
-        }
+        Utility.showWebViewController(article.url, title: article.title)
+//        Utility.showViewController("WebViewController") { (vc) in
+//            guard let webVc = vc as? WebViewController else {
+//                return
+//            }
+//            webVc.url = article.url
+//        }
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {

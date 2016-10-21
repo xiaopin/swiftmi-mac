@@ -40,6 +40,7 @@ class SourceCodeModel: NSObject {
     var commentCount: Int = 0
     var categoryName: String = ""
     var username: String = ""
+    var url: String = ""
     
     class func mapping(_ json: JSON) -> SourceCodeModel {
         let model = SourceCodeModel()
@@ -73,6 +74,7 @@ class SourceCodeModel: NSObject {
         model.commentCount = json["commentCount"].intValue
         model.categoryName = json["categoryName"].stringValue
         model.username = json["username"].stringValue
+        model.url = ServiceApi.getSourceCodeDetailUrl(model.codeId)
         
         return model
     }

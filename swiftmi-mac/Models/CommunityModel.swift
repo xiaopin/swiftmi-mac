@@ -29,6 +29,7 @@ class CommunityModel: NSObject {
     var cmtUserId:Int64 = 0
     var cmtUserName:String = ""
     var isHtml:Int32 = 0
+    var url: String = ""
     
     class func mapping(_ data:JSON) -> CommunityModel{
         let item = CommunityModel()
@@ -51,6 +52,7 @@ class CommunityModel: NSObject {
         item.cmtUserName = data["cmtUserName"].stringValue
         item.desc = data["desc"].stringValue
         item.isHtml = data["commentCount"].int32Value
+        item.url = ServiceApi.getTopicDetailUrl(Int(item.postId));
         
         return item
     }

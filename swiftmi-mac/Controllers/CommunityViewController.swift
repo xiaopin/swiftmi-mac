@@ -38,7 +38,13 @@ class CommunityViewController: NSViewController, NSTableViewDelegate, NSTableVie
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
-        
+        let tableView = notification.object as! NSTableView
+        let index = tableView.selectedRow
+        if index == -1 {
+            return
+        }
+        let message = messages[index]
+        Utility.showWebViewController(message.url, title: message.title)
     }
     
     // MARK: - Private
