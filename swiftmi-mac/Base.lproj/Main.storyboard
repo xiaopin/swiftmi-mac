@@ -1225,13 +1225,13 @@
                                     <action selector="segmentedControlAction:" target="cpn-cn-hxW" id="gFD-ub-z25"/>
                                 </connections>
                             </segmentedControl>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="152" horizontalPageScroll="10" verticalLineScroll="152" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1H-wB-TJY">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="115" horizontalPageScroll="10" verticalLineScroll="115" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1H-wB-TJY">
                                 <rect key="frame" x="0.0" y="0.0" width="450" height="259"/>
                                 <clipView key="contentView" id="3Y8-uy-EOV">
                                     <rect key="frame" x="1" y="1" width="448" height="257"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="150" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="PtX-fv-0vJ">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="113" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="PtX-fv-0vJ">
                                             <rect key="frame" x="0.0" y="0.0" width="448" height="257"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -1253,23 +1253,23 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="BookCell" id="9sg-Sq-aYU" customClass="BookCell" customModule="swiftmi_mac" customModuleProvider="target">
-                                                            <rect key="frame" x="1" y="1" width="445" height="114"/>
+                                                            <rect key="frame" x="1" y="1" width="445" height="113"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="e0s-SR-0n7">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="445" height="114"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="445" height="113"/>
                                                                     <subviews>
                                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPN-eR-XZh">
-                                                                            <rect key="frame" x="20" y="20" width="74" height="74"/>
+                                                                            <rect key="frame" x="20" y="20" width="73" height="73"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="pPN-eR-XZh" secondAttribute="height" multiplier="1:1" id="kR0-H3-MHF"/>
                                                                             </constraints>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="placeholder-image" id="cal-Rz-RLo"/>
                                                                         </imageView>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6d2-C9-VKa">
-                                                                            <rect key="frame" x="112" y="74" width="315" height="20"/>
+                                                                            <rect key="frame" x="111" y="69" width="316" height="24"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="height" constant="20" id="5Z7-c9-xms"/>
+                                                                                <constraint firstAttribute="height" constant="24" id="5Z7-c9-xms"/>
                                                                             </constraints>
                                                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="qC3-Ab-f1g">
                                                                                 <font key="font" metaFont="system" size="18"/>
@@ -1278,7 +1278,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="odJ-2r-beC">
-                                                                            <rect key="frame" x="112" y="47" width="315" height="17"/>
+                                                                            <rect key="frame" x="111" y="42" width="316" height="17"/>
                                                                             <textFieldCell key="cell" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="Label" id="fvf-zq-2BY">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1286,7 +1286,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aiX-Ex-ABG">
-                                                                            <rect key="frame" x="112" y="20" width="84" height="17"/>
+                                                                            <rect key="frame" x="111" y="20" width="84" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="17" id="CNb-mA-Oql"/>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Qng-J0-rjv"/>
@@ -1298,7 +1298,7 @@
                                                                             </textFieldCell>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QLw-ik-5Zv">
-                                                                            <rect key="frame" x="212" y="20" width="84" height="17"/>
+                                                                            <rect key="frame" x="211" y="20" width="84" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="80" id="5sZ-Nc-Twu"/>
                                                                             </constraints>
@@ -1315,7 +1315,7 @@
                                                                         <constraint firstItem="pPN-eR-XZh" firstAttribute="leading" secondItem="e0s-SR-0n7" secondAttribute="leading" constant="20" id="F56-lQ-leZ"/>
                                                                         <constraint firstItem="odJ-2r-beC" firstAttribute="trailing" secondItem="6d2-C9-VKa" secondAttribute="trailing" id="HK4-Pi-SRP"/>
                                                                         <constraint firstItem="aiX-Ex-ABG" firstAttribute="leading" secondItem="6d2-C9-VKa" secondAttribute="leading" id="Hhg-eo-xtC"/>
-                                                                        <constraint firstItem="aiX-Ex-ABG" firstAttribute="top" secondItem="odJ-2r-beC" secondAttribute="bottom" constant="10" id="KAc-OP-eZI"/>
+                                                                        <constraint firstItem="aiX-Ex-ABG" firstAttribute="top" secondItem="odJ-2r-beC" secondAttribute="bottom" constant="5" id="KAc-OP-eZI"/>
                                                                         <constraint firstItem="odJ-2r-beC" firstAttribute="leading" secondItem="6d2-C9-VKa" secondAttribute="leading" id="PEf-ls-vkG"/>
                                                                         <constraint firstItem="QLw-ik-5Zv" firstAttribute="top" secondItem="aiX-Ex-ABG" secondAttribute="top" id="Q2m-t5-TSI"/>
                                                                         <constraint firstItem="6d2-C9-VKa" firstAttribute="top" secondItem="pPN-eR-XZh" secondAttribute="top" id="UOY-Hu-6zE"/>
