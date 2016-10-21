@@ -40,6 +40,10 @@ class ArticleDetailViewController: NSViewController, WebFrameLoadDelegate {
     }
     
     func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
+        if frame == webView.mainFrame {
+            let js = "$('.header').remove();$('.panel.panel-default:eq(2)').remove();"
+            webView.stringByEvaluatingJavaScript(from: js);
+        }
         progressIndicator.stopAnimation(nil)
     }
     

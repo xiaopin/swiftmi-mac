@@ -35,7 +35,7 @@ class Utility: NSObject {
             toVc.view.wantsLayer = true
             toVc.view.layer?.backgroundColor = NSColor(red: 246.0/255.0, green: 246.0/255.0, blue: 246.0/255.0, alpha: 1.0).cgColor
         }
-//        toVc.view.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
+        toVc.view.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
     }
     
     /// 切换到根控制器
