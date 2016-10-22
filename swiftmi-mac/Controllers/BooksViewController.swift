@@ -54,6 +54,7 @@ class BooksViewController: NSViewController, NSTableViewDataSource, NSTableViewD
         if index == -1 {
             return
         }
+        tableView.deselectRow(index)
         var book: BookModel
         switch language {
         case .Chinese:

@@ -63,9 +63,10 @@ extension ArticleListViewController: NSTableViewDelegate {
     func tableViewSelectionDidChange(_ notification: Notification) {
         let tableView = notification.object as! NSTableView
         let index = tableView.selectedRow
-        if index == -1 {
+        if index == -1 || index >= articles.count {
             return
         }
+        tableView.deselectRow(index)
         let article = articles[index]
         Utility.showWebViewController(article.url, title: article.title)
     }

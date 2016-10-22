@@ -18,7 +18,7 @@ class CommunityViewController: NSViewController, NSTableViewDelegate, NSTableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 118.0
+        tableView.rowHeight = 130.0
         loadData(0)
     }
     
@@ -40,9 +40,10 @@ class CommunityViewController: NSViewController, NSTableViewDelegate, NSTableVie
     func tableViewSelectionDidChange(_ notification: Notification) {
         let tableView = notification.object as! NSTableView
         let index = tableView.selectedRow
-        if index == -1 {
+        if index == -1 || index >= messages.count {
             return
         }
+        tableView.deselectRow(index)
         let message = messages[index]
         Utility.showWebViewController(message.url, title: message.title)
     }
