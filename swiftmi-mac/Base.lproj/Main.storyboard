@@ -875,25 +875,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2pu-uZ-NI0">
-                                <rect key="frame" x="8" y="280" width="58" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="IhE-ii-vSt"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="更新时间" id="abc-S1-lbd">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="92" horizontalPageScroll="10" verticalLineScroll="92" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="PlR-Z2-Ig7">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="280"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                                 <clipView key="contentView" id="AFc-qG-8cs">
-                                    <rect key="frame" x="1" y="1" width="448" height="278"/>
+                                    <rect key="frame" x="1" y="1" width="448" height="298"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="90" rowSizeStyle="automatic" viewBased="YES" id="Md4-ns-s5t">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="278"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="448" height="298"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1009,14 +998,11 @@
                         <constraints>
                             <constraint firstItem="PlR-Z2-Ig7" firstAttribute="leading" secondItem="wBf-OQ-5TW" secondAttribute="leading" id="8FD-ac-L1e"/>
                             <constraint firstAttribute="bottom" secondItem="PlR-Z2-Ig7" secondAttribute="bottom" id="L7Q-9J-Umv"/>
-                            <constraint firstItem="PlR-Z2-Ig7" firstAttribute="top" secondItem="2pu-uZ-NI0" secondAttribute="bottom" id="OjJ-LU-HPF"/>
-                            <constraint firstItem="2pu-uZ-NI0" firstAttribute="leading" secondItem="wBf-OQ-5TW" secondAttribute="leading" constant="10" id="PyL-ej-uPz"/>
+                            <constraint firstItem="PlR-Z2-Ig7" firstAttribute="top" secondItem="wBf-OQ-5TW" secondAttribute="top" id="LBN-85-8vX"/>
                             <constraint firstAttribute="trailing" secondItem="PlR-Z2-Ig7" secondAttribute="trailing" id="ak5-85-683"/>
-                            <constraint firstItem="2pu-uZ-NI0" firstAttribute="top" secondItem="wBf-OQ-5TW" secondAttribute="top" id="rlI-Tc-a1g"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lastUpdateTextField" destination="2pu-uZ-NI0" id="VYw-Xi-m9F"/>
                         <outlet property="tableView" destination="Md4-ns-s5t" id="BIu-IH-0hp"/>
                     </connections>
                 </viewController>

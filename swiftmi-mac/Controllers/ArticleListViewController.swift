@@ -11,7 +11,6 @@ import Cocoa
 class ArticleListViewController: NSViewController {
     
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var lastUpdateTextField: NSTextField!
     
     fileprivate var articles = [ArticleModel]()
 
@@ -42,7 +41,6 @@ class ArticleListViewController: NSViewController {
                 self.articles.append(contentsOf: array)
             }
             self.tableView.reloadData()
-            self.lastUpdateTextField.stringValue = "更新时间 \(Utility.nowDateString())"
         }
     }
 
