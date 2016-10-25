@@ -15,6 +15,9 @@ class WebViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
     var url: String?
     /// 菊花
     @IBOutlet weak var progressIndicator: NSProgressIndicator!
+    @IBOutlet weak var gobackButton: NSButton!
+    @IBOutlet weak var goForwardButton: NSButton!
+    
     /// 网页视图
     lazy var webView: WKWebView = {
         let configure = WKWebViewConfiguration()
@@ -25,8 +28,7 @@ class WebViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
             configure.userContentController.addUserScript(userScript)
         } catch {}
 
-        let webView = WKWebView(frame: self.view.bounds, configuration: configure)
-        webView.autoresizingMask = [.viewWidthSizable, .viewHeightSizable]
+        let webView = WKWebView(frame: NSRect.zero, configuration: configure)
         webView.navigationDelegate = self
         webView.uiDelegate = self
         
@@ -38,6 +40,14 @@ class WebViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(webView, positioned: .below, relativeTo: progressIndicator)
+        
+        // WKWebView自动布局
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        let top = webView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0.0)
+        let bottom = webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -44.0)
+        let left = webView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0.0)
+        let right = webView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0.0)
+        NSLayoutConstraint.activate([left, right, top, bottom])
         
         if let url = url {
             let request = URLRequest(url: URL(string: url)!)
@@ -61,6 +71,8 @@ class WebViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         progressIndicator.stopAnimation(nil)
+        gobackButton.isEnabled = webView.canGoBack
+        goForwardButton.isEnabled = webView.canGoForward
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
@@ -84,6 +96,29 @@ class WebViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
         alert.addButton(withTitle: "取消")
         let result = alert.runModal()
         completionHandler( result == 1000 )
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func gohomeButtonAction(_ sender: NSButton) {
+        self.removeFromParentViewController()
+        self.view.removeFromSuperview()
+    }
+    
+    @IBAction func gobackButtonAction(_ sender: NSButton) {
+        if webView.canGoBack {
+            webView.goBack()
+        }
+    }
+    
+    @IBAction func forwardButtonAction(_ sender: NSButton) {
+        if webView.canGoForward {
+            webView.goForward()
+        }
+    }
+    
+    @IBAction func refreshButtonAction(_ sender: NSButton) {
+        webView.reload()
     }
     
 }

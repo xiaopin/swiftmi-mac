@@ -673,11 +673,6 @@
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="0A5-pY-16w"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="K5g-90-3ez"/>
-                                <toolbarItem implicitItemIdentifier="C88AC284-5530-4367-A987-C752CC9CCFB0" label="上一页" paletteLabel="上一页" tag="-1" image="NSLeftFacingTriangleTemplate" id="ZLs-YQ-Whp">
-                                    <connections>
-                                        <action selector="gobackToolbarItemAction:" target="QD5-gp-o2P" id="UdU-Ds-uzE"/>
-                                    </connections>
-                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="20D70496-FEB7-4408-BC98-DA1CD9A597CB" label="官网" paletteLabel="官网" tag="-1" image="NSNetwork" id="aNd-6W-63z">
                                     <connections>
                                         <action selector="homeToolbarItemAction:" target="QD5-gp-o2P" id="y72-Zw-NKf"/>
@@ -685,14 +680,12 @@
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="ZLs-YQ-Whp"/>
                                 <toolbarItem reference="K5g-90-3ez"/>
                                 <toolbarItem reference="aNd-6W-63z"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
                     <connections>
-                        <outlet property="gobackToolbarItem" destination="ZLs-YQ-Whp" id="OtD-iF-ffr"/>
                         <segue destination="vN6-dM-D19" kind="relationship" relationship="window.shadowedContentViewController" id="7jv-5y-voM"/>
                     </connections>
                 </windowController>
@@ -730,15 +723,86 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="x5g-hF-cqK">
-                                <rect key="frame" x="209" y="134" width="32" height="32"/>
+                                <rect key="frame" x="209" y="154" width="32" height="32"/>
                             </progressIndicator>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="omg-Wm-GmC">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="44"/>
+                                <subviews>
+                                    <button toolTip="返回首页" translatesAutoresizingMaskIntoConstraints="NO" id="j6C-l2-ijD">
+                                        <rect key="frame" x="20" y="9" width="26" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="26" id="Jbp-u8-Dtf"/>
+                                            <constraint firstAttribute="height" constant="26" id="YJY-dM-ih5"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSHomeTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="fX0-PN-Kuf">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="gohomeButtonAction:" target="gy5-8m-juT" id="4O6-gw-LLm"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="显示上一页" translatesAutoresizingMaskIntoConstraints="NO" id="5GC-6R-HDI">
+                                        <rect key="frame" x="66" y="9" width="26" height="26"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSLeftFacingTriangleTemplate" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyUpOrDown" inset="2" id="HWh-fI-3o5">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="gobackButtonAction:" target="gy5-8m-juT" id="JKh-40-KxO"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="显示下一页" translatesAutoresizingMaskIntoConstraints="NO" id="urZ-vT-99u">
+                                        <rect key="frame" x="112" y="9" width="26" height="26"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSRightFacingTriangleTemplate" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyUpOrDown" inset="2" id="mhK-PV-2nr">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="forwardButtonAction:" target="gy5-8m-juT" id="UAU-Hg-mZx"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="刷新当前页面" translatesAutoresizingMaskIntoConstraints="NO" id="x0D-Ou-lma">
+                                        <rect key="frame" x="158" y="9" width="26" height="26"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSRefreshTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PQC-US-Cvm">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="refreshButtonAction:" target="gy5-8m-juT" id="cJm-9y-U9e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5GC-6R-HDI" firstAttribute="width" secondItem="j6C-l2-ijD" secondAttribute="width" id="1bl-Tq-WoC"/>
+                                    <constraint firstItem="urZ-vT-99u" firstAttribute="height" secondItem="j6C-l2-ijD" secondAttribute="height" id="ByK-eT-NdL"/>
+                                    <constraint firstItem="urZ-vT-99u" firstAttribute="leading" secondItem="5GC-6R-HDI" secondAttribute="trailing" constant="20" id="DMG-Vq-SNn"/>
+                                    <constraint firstItem="urZ-vT-99u" firstAttribute="width" secondItem="j6C-l2-ijD" secondAttribute="width" id="FXe-jI-kVC"/>
+                                    <constraint firstItem="5GC-6R-HDI" firstAttribute="centerY" secondItem="omg-Wm-GmC" secondAttribute="centerY" id="FmE-4z-Xl6"/>
+                                    <constraint firstItem="j6C-l2-ijD" firstAttribute="centerY" secondItem="omg-Wm-GmC" secondAttribute="centerY" id="I9f-qW-YVX"/>
+                                    <constraint firstAttribute="height" constant="44" id="MA9-lP-gSa"/>
+                                    <constraint firstItem="5GC-6R-HDI" firstAttribute="height" secondItem="j6C-l2-ijD" secondAttribute="height" id="RBS-fG-4TZ"/>
+                                    <constraint firstItem="urZ-vT-99u" firstAttribute="centerY" secondItem="omg-Wm-GmC" secondAttribute="centerY" id="bRf-zF-emz"/>
+                                    <constraint firstItem="x0D-Ou-lma" firstAttribute="leading" secondItem="urZ-vT-99u" secondAttribute="trailing" constant="20" id="hzf-CV-Nrk"/>
+                                    <constraint firstItem="x0D-Ou-lma" firstAttribute="width" secondItem="j6C-l2-ijD" secondAttribute="width" id="jra-Nh-gCi"/>
+                                    <constraint firstItem="j6C-l2-ijD" firstAttribute="leading" secondItem="omg-Wm-GmC" secondAttribute="leading" constant="20" id="l2P-B1-qDo"/>
+                                    <constraint firstItem="x0D-Ou-lma" firstAttribute="height" secondItem="j6C-l2-ijD" secondAttribute="height" id="qDT-fm-a85"/>
+                                    <constraint firstItem="5GC-6R-HDI" firstAttribute="leading" secondItem="j6C-l2-ijD" secondAttribute="trailing" constant="20" id="vce-DD-qWL"/>
+                                    <constraint firstItem="x0D-Ou-lma" firstAttribute="centerY" secondItem="omg-Wm-GmC" secondAttribute="centerY" id="wH6-s1-YVa"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="x5g-hF-cqK" firstAttribute="centerX" secondItem="pTi-LW-603" secondAttribute="centerX" id="Aop-9P-XWf"/>
-                            <constraint firstItem="x5g-hF-cqK" firstAttribute="centerY" secondItem="pTi-LW-603" secondAttribute="centerY" id="L3w-o9-K6I"/>
+                            <constraint firstAttribute="trailing" secondItem="omg-Wm-GmC" secondAttribute="trailing" id="G9C-ua-u39"/>
+                            <constraint firstAttribute="bottom" secondItem="omg-Wm-GmC" secondAttribute="bottom" id="HJC-d3-c81"/>
+                            <constraint firstItem="x5g-hF-cqK" firstAttribute="centerY" secondItem="pTi-LW-603" secondAttribute="centerY" constant="-20" id="L3w-o9-K6I"/>
+                            <constraint firstItem="omg-Wm-GmC" firstAttribute="leading" secondItem="pTi-LW-603" secondAttribute="leading" id="kzh-BU-dPD"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="goForwardButton" destination="urZ-vT-99u" id="Sko-Gb-pVA"/>
+                        <outlet property="gobackButton" destination="5GC-6R-HDI" id="KqN-At-MdO"/>
                         <outlet property="progressIndicator" destination="x5g-hF-cqK" id="bt7-qt-Zr6"/>
                     </connections>
                 </viewController>
@@ -1441,8 +1505,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSHomeTemplate" width="14" height="14"/>
         <image name="NSLeftFacingTriangleTemplate" width="9" height="12"/>
         <image name="NSNetwork" width="32" height="32"/>
+        <image name="NSRefreshTemplate" width="11" height="15"/>
+        <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
         <image name="comment" width="20" height="20"/>
         <image name="placeholder-image" width="60" height="60"/>
     </resources>
