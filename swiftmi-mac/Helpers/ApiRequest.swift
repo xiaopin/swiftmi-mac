@@ -11,7 +11,36 @@ import Alamofire
 import SwiftyJSON
 
 
+struct ApiTaskMonitor {
+    
+    private var maps = Dictionary<String, Bool>()
+    
+    func isTaskExists(_ key: String) -> Bool {
+        if let flag = maps[key], flag == true {
+            return true
+        }
+        return false
+    }
+    
+    mutating func addMonitor(_ key: String) {
+        if isTaskExists(key) {
+            return
+        }
+        maps[key] = true
+    }
+    
+    mutating func removeMonitor(_ key: String) {
+        if !isTaskExists(key) {
+            return
+        }
+        maps.removeValue(forKey: key)
+    }
+}
+
+
 class ApiRequest: NSObject {
+    
+    static var monitor = ApiTaskMonitor()
     
     /// 获取文章列表数据
     ///
@@ -19,7 +48,14 @@ class ApiRequest: NSObject {
     /// - parameter count:    分页大小
     /// - parameter callback: 回调
     class func loadArticles(_ maxId: Int, count: Int, callback:@escaping ((_ articles:[ArticleModel]?) -> Void)) {
-        Alamofire.request(ServiceApi.getArticlesUrl(maxId, count: count)).responseJSON { (response) in
+        let url = ServiceApi.getArticlesUrl(maxId, count: count)
+        if monitor.isTaskExists(url) {
+            return
+        }
+        monitor.addMonitor(url)
+        
+        Alamofire.request(url).responseJSON { (response) in
+            monitor.removeMonitor(url)
             guard let json = response.result.value else {
                 return callback(nil)
             }
@@ -46,7 +82,14 @@ class ApiRequest: NSObject {
     /// - parameter count:    分页大小
     /// - parameter callback: 回调
     class func loadTopics(_ maxId: Int, count: Int, callback: @escaping ((_ response: [CommunityModel]?) -> Void)) {
-        Alamofire.request(ServiceApi.getTopicUrl(maxId, count: count)).responseJSON { (response) in
+        let url = ServiceApi.getTopicUrl(maxId, count: count)
+        if monitor.isTaskExists(url) {
+            return
+        }
+        monitor.addMonitor(url)
+        
+        Alamofire.request(url).responseJSON { (response) in
+            monitor.removeMonitor(url)
             guard let json = response.result.value else {
                 return callback(nil)
             }
@@ -72,7 +115,14 @@ class ApiRequest: NSObject {
     /// - parameter count:    分页大小
     /// - parameter callback: 回调
     class func loadSourceCodes(_ maxId: Int, count: Int, callback: @escaping ((_ response: [SourceCodeModel]?) -> Void)) {
-        Alamofire.request(ServiceApi.getSourceCodeUrl(maxId, count: count)).responseJSON { response in
+        let url = ServiceApi.getSourceCodeUrl(maxId, count: count)
+        if monitor.isTaskExists(url) {
+            return
+        }
+        monitor.addMonitor(url)
+        
+        Alamofire.request(url).responseJSON { response in
+            monitor.removeMonitor(url)
             guard let json = response.result.value else {
                 return callback(nil)
             }
@@ -99,7 +149,14 @@ class ApiRequest: NSObject {
     /// - parameter count:    分页大小
     /// - parameter callback: 回调
     class func loadBooksWithLanguage(_ language: BookLanguage, maxId: Int, count: Int, callback:@escaping ((_ language:BookLanguage, _ response: [BookModel]?) -> Void)) {
-        Alamofire.request(ServiceApi.getBooksUrl(language, maxId: maxId, count: count)).responseJSON { (response) in
+        let url = ServiceApi.getBooksUrl(language, maxId: maxId, count: count)
+        if monitor.isTaskExists(url) {
+            return
+        }
+        monitor.addMonitor(url)
+        
+        Alamofire.request(url).responseJSON { (response) in
+            monitor.removeMonitor(url)
             guard let json = response.result.value else {
                 return callback(language, nil)
             }
