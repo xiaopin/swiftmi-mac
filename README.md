@@ -4,19 +4,19 @@
 
 感谢`swift迷`社区开源，才有了这个项目
 
-该项目为本人首次涉足macOS应用开发的首作，个人能力有限，难免会有很多Bug，欢迎大家提`Issues`
+刚开始学习mac应用开发，个人能力有限，难免会有很多Bug，欢迎大家提`Issues`
 
 ## 预览
 
-![文章](./preview1.png)
+![文章](./preview1.jpg)
 
-![社区](./preview2.png)
+![社区](./preview2.jpg)
 
-![图书](./preview3.png)
+![图书](./preview3.jpg)
 
-![源码](./preview4.png)
+![源码](./preview4.jpg)
 
-![详情](./preview5.png)
+![详情](./preview5.jpg)
 
 
 ## 环境
