@@ -21,8 +21,12 @@ class WindowController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        window?.title = kMainWindowTitle
         _splitViewController = window?.contentViewController as? NSSplitViewController
+        window?.title = kMainWindowTitle
+        window?.isRestorable = false
+        window?.setFrame(NSRect(x: 0.0, y: 0.0, width: 900.0, height: 700.0), display: true)
+        window?.minSize = NSSize(width: 900.0, height: 700.0)
+        window?.center()
     }
     
     // MARK: - Actions
