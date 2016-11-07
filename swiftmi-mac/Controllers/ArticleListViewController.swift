@@ -70,6 +70,10 @@ extension ArticleListViewController: NSTableViewDelegate {
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        if articles.count > 0 && articles.count - row < 3 {
+            let lastArticle = articles.last!
+            loadArticles(lastArticle.articleId)
+        }
         let cell = tableView.make(withIdentifier: "ArticleListCell", owner: tableView) as! ArticleListCell
         let article = articles[row]
         cell.configureCell(article)

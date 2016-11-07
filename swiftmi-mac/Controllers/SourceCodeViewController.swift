@@ -53,6 +53,10 @@ class SourceCodeViewController: NSViewController, NSCollectionViewDataSource, NS
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
+        if contents.count > 0 && contents.count - indexPath.item < 3 {
+            let last = contents.last!
+            loadData(last.codeId)
+        }
         let item = collectionView.makeItem(withIdentifier: reuseIdentifier, for: indexPath)
         item.representedObject = contents[indexPath.item]
         return item

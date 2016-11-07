@@ -31,6 +31,10 @@ class CommunityViewController: NSViewController, NSTableViewDelegate, NSTableVie
     // MARK: - NSTableViewDelegate
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        if messages.count > 0 && messages.count - row < 3 {
+            let lastMessage = messages.last!
+            loadData(Int(lastMessage.postId))
+        }
         let cell = tableView.make(withIdentifier: "CommunityCell", owner: tableView) as! CommunityCell
         let model = messages[row]
         cell.configureCell(model)

@@ -24,8 +24,8 @@ class WindowController: NSWindowController {
         _splitViewController = window?.contentViewController as? NSSplitViewController
         window?.title = kMainWindowTitle
         window?.isRestorable = false
-        window?.setFrame(NSRect(x: 0.0, y: 0.0, width: 900.0, height: 700.0), display: true)
-        window?.minSize = NSSize(width: 900.0, height: 700.0)
+        window?.setFrame(NSRect(x: 0.0, y: 0.0, width: 750.0, height: 600.0), display: true)
+        window?.minSize = NSSize(width: 750.0, height: 600.0)
         window?.center()
     }
     
